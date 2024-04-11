@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Login | Look Who's Streaming{% endblock title %}
+
+{% block main %}
+<div class="admin-login">
+  <div class="admin-header">
+    <h1>Admin Login</h1>
+  </div>
+  {% for error in form.non_field_errors %}
+  <p class="error">{{ error }}</p>
+  {% endfor %}
+
+  <!-- Admin Login Form -->
+  <form method="post" class="admin-form">
+    {% csrf_token %}
+    {% for field in form %}
+    <p class="field-group">
+      <label for="{{ field.name }}">{{ field.label }}</label><br>
+      {{ field }}
+      {% if field.errors %}
+      {{ field.errors }}
+      {% endif %}
+    </p>
+    {% endfor %}
+    <button>Login</button>
+  </form>
+</div>
+{% endblock main %}

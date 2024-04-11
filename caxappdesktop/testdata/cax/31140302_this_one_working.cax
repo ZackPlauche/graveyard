@@ -1,0 +1,90 @@
+;  _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2020-2021                          |
+; |                              TestCompany Inc.                         |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.testingABC.com                      |
+; |                      contact: never@testABC.com                       |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+;
+;
+[F9000_y]
+;         Description
+;         ---------------------------------------------------------------------------------------------------------------------------------
+;
+DESC.001 =  y-axis for calculated urea flow 2-d table, input is measured smart pump pressure
+DESC.002 = C_USM_prg_DosingRate_Y
+;         Seg Caption                                  Major              Minor              Vis Dis 2D Grp
+VIEW =     2    "y-axis for calculated "              "Dosing Rate"           ""      1   2  0  0
+;         Address(es)                      BitOff Bits Typ Inv
+ADDR =     39D684                                0   32  FLT   0
+;         Unit Symbol            Factor         Offset Prec       MinLimit       MaxLimit        MinUser        MaxUser
+SI_SLOT = kPa                     1              0    2              -65535          65535              -65535          65535
+;    # Body            #Col              #Row
+;         -------------- -------------- --------------
+;ULABELS = .              .              .
+ULABELS = .              .              .
+;           # Enumerations
+SI_ENUM = ""
+IM_ENUM = ""
+SI_COL = .             ""                
+SI_ROW = .             "1,2,3,4,5,6,7,8,9,10,11,12"                
+IM_COL =  .            ""                
+IM_ROW =  .            "1,2,3,4,5,6,7,8,9,10,11,12"                
+; ======================================================================================================
+;
+;
+[F9000_x]
+;         Description
+;         ---------------------------------------------------------------------------------------------------------------------------------
+;
+DESC.001 =  x-axis for calculated urea flow 2-d table, input is limited urea injector duty cycle axis
+DESC.002 = C_USM_pc_DosingRate_X
+;         Seg Caption                                  Major              Minor              Vis Dis 2D Grp
+VIEW =     2    "x-axis f"              "Dosing Rate"           ""      1   2  0  0
+;         Address(es)                      BitOff Bits Typ Inv
+ADDR =     39D604                                0   32  FLT   0
+;         Unit Symbol            Factor         Offset Prec       MinLimit       MaxLimit        MinUser        MaxUser
+SI_SLOT = .                     1              0    2                                                
+;    # Body            #Col              #Row
+;         -------------- -------------- --------------
+;ULABELS = .              .              .
+ULABELS = .              .              .
+;           # Enumerations
+SI_ENUM = ""
+IM_ENUM = ""
+SI_COL = .             ""                
+SI_ROW = .             "1,2,3,4,5,6,7,8,9,10,11,12"                
+IM_COL =  .            ""                
+IM_ROW =  .            "1,2,3,4,5,6,7,8,9,10,11,12"      
+; ======================================================================================================
+;
+;
+[C9000]
+;         Description
+;         ---------------------------------------------------------------------------------------------------------------------------------
+;
+DESC.001 =  C_USM_flm_DosingRate_Tbl
+DESC.002 = 18207
+DESC.003 = Calculated urea flow 2-d table for limited urea injector duty cycle and measured smart pump pressure
+;         Seg Caption                                  Major              Minor              Vis Dis 2D Grp
+VIEW =     2    "C_USM_flm_DosingRate_Tbl_main"              "Dosing Rate"           ""      1   3  0  0
+;         Address(es)                      BitOff Bits Typ Inv
+ADDR =     39D118                                0   32  FLT   0
+;         Unit Symbol            Factor         Offset Prec       MinLimit       MaxLimit        MinUser        MaxUser
+SI_SLOT = ml/sec                     1              0    2              -65535          65535              -65535          65535
+;    # Body            #Col              #Row
+;         -------------- -------------- --------------
+;ULABELS = .              .              .
+ULABELS = .              .              .
+;           # Enumerations
+SI_ENUM = "1,2,3,4,5,6,7,8,9,10,11,12"
+IM_ENUM = "1,2,3,4,5,6,7,8,9,10,11,12"
+SI_COL =  .             "@F9000_y"                
+SI_ROW =  .             "@F9000_x"                
+IM_COL =  .            "1,2,3,4,5,6,7,8,9,10,11,12"                
+IM_ROW =  .            "1,2,3,4,5,6,7,8,9,10,11,12"                
+; ======================================================================================================

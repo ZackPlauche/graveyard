@@ -1,0 +1,12 @@
+*.pyc
+*.idea
+__pycache__
+openpyxl_training.py
+Pipfile
+Pipefile.lock
+venv
+.vscode
+data
+Test Data
+Data Storage
+Reflections

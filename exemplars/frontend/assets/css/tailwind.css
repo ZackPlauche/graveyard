@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer base {
+  h2 {
+    @apply text-4xl font-bold
+  }
+
+  h3 {
+    @apply text-3xl font-semibold
+  }
+
+  form {
+    @apply shadow-xl w-full max-w-md
+  }
+
+  input[type="text"],
+  select,
+  textarea {
+    @apply border p-2 transition-colors ease-[ease] hover:border-yellow-400 focus:border-yellow-400 outline-none w-full;
+  }
+}
+
+@layer components {
+  
+  .container {
+    @apply max-w-screen-xl mx-auto;
+  }
+  
+  .form-button {
+    @apply w-full bg-yellow-600 hover:bg-yellow-500 transition-colors py-3 text-white whitespace-nowrap;
+  }
+
+  .btn {
+    @apply inline-block px-5 py-2 text-white bg-yellow-600 hover:bg-yellow-500 transition-colors whitespace-nowrap
+  }
+}

@@ -1,0 +1,4 @@
+.env
+*.pyc
+ignore/*
+.pytest_cache/*

@@ -1,0 +1,55 @@
+%hero {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.hero {
+  @extend %hero;
+  min-height: calc(100vh - var(--navbar-height));
+
+  &.home-hero {
+    padding: 100px 0;
+    position: relative;
+
+    @media screen and (max-width: 785px) {padding-top: 20px}
+
+    .lead {margin-bottom: 30px}
+
+    .btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 30px 60px;
+    }
+
+    @media screen and (max-width: 1057px) {
+      .btn {
+        flex: 1;
+        min-width: 100%;
+      }
+    }
+  }
+
+  &-full {
+    @extend %hero;
+    min-height: 100vh;
+    margin-top: calc(var(--navbar-height) * -1);
+  }
+
+  &-half {
+    @extend %hero;
+    min-height: 50vh;
+  }
+
+  &-half-full {
+    @extend %hero;
+    min-height: 50vh;
+    margin-top: calc(var(--navbar-height) * -1);
+  }
+
+  &-footer-accent {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+}

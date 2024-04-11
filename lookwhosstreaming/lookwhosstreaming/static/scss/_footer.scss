@@ -1,0 +1,77 @@
+/* Footer */
+@use "settings" as *;
+
+footer {
+  min-height: 4vh;
+}
+
+.footer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: $footer-padding;
+  background-color: $footer-background;
+
+  @media screen and (max-width: 1001px) {
+    justify-content: space-around;
+  }
+
+  & > div {
+    // Don't put margin.
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 300px;
+  }
+
+  & > div:not(:first-of-type) {
+    border-left: 1px solid black;
+  }
+
+  .logo img {
+    height: 100%;
+  }
+
+  .footer-menu {
+    width: 320px;
+    padding: 30px 20px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    @media screen and (max-width: 1001px) {
+      border: none;
+    }
+
+    .nav-links {
+      display: grid;
+      justify-content: space-between;
+      align-content: space-between;
+      grid-template-columns: auto auto;
+      list-style: none;
+      height: 100%;
+
+      a {
+        color: $navlink-color;
+        font-size: 20px;
+        font-weight: 300;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: $navlink-hover;
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $copyright-height;
+  color: $copyright-text;
+  background: $copyright-background;
+}
+

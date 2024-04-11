@@ -1,0 +1,10 @@
+dj-database-url
+django-cors-headers
+django-extensions
+django-rest-framework
+gunicorn
+pillow
+pip-chill
+psycopg2-binary
+python-dotenv
+whitenoise

@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: browser
+Version: 0.0.1
+Summary: An OOP wrapper extension for the Python Selenium library to better manage browser actions.
+Author: Zack Plauché

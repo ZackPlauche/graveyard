@@ -1,0 +1,26 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+# 0*.py
+venv
+.vscode
+.env
+Pipfile
+Pipfile.lock
+prepros.config
+lws_deploy/
+
+# Broadcast files
+auth_storage.txt
+creds*.txt
+*.swp
+*.ipynb
+
+# Broadcast folders
+.ipynb_checkpoints
+celerybeat-schedule
+celerybeat.pid

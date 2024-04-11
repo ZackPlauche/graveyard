@@ -1,0 +1,29 @@
+.dark {
+  --primary: var(--secondary);
+  --bg-secondary: var(--dark);
+  --text-secondary: var(--light);
+}
+
+.inverted {
+  --bg-primary: var(--light);
+  --text-primary: var(--dark);
+  --bg-secondary: var(--dark);
+  --text-secondary: var(--light);
+  --footer-color: var(--light);
+  --footer-bg-color: var(--dark);
+  --navbar-nav-link-color: var(--dark);
+  --navbar-nav-link-color-hover: var(--primary);
+  section:not(.hero) {
+    --primary: var(--accent);
+  }
+}
+
+.olga-plauche-unicorn-theme {
+  --primary: magenta;
+  --primary-hover: darkmagenta;
+}
+
+.test-theme {
+}
+
+

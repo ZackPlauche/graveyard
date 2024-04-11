@@ -1,0 +1,7 @@
+autopep8
+imageio
+pandas
+pytest
+python-dotenv
+elements @ git+https://github.com/ZackPlauche/elements
+pages @ git+https://www.github.com/zackplauche/pages

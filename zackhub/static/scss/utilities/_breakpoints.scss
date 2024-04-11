@@ -1,0 +1,12 @@
+.desktop {
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+  @media screen and (max-width: $mobile) {
+    display: initial;
+  }
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "model": "services.service",
+    "pk": 1,
+    "fields": {
+      "icon": "images/shopify_glyph.png",
+      "service_type": "service",
+      "title": "Shopify Ecommerce Store Build",
+      "slug": "shopify-ecommerce-store-build",
+      "short_description": "Ready to gracefully get your company online?\r\n\r\nShopify is the best platform for online ecommerce PERIOD.\r\n\r\nMore than ever, people are shopping onine and companies are making BANK from ecommerce sales.\r\n\r\nWith Shopify's HUGE arsenal of apps and themes to help optimize for sales, you get the highest chance of success without spending 10s of thousands of dollars on an ecommerce website.\r\n\r\nDon't get left behind.\r\n\r\nLet me build you a sexy functional ecom store and start the scaling process today!",
+      "long_description": "",
+      "created_date": "2020-09-15T14:10:17.041Z",
+      "price": "2000.00",
+      "payment_type": "in full",
+      "call_to_action": "Order Now",
+      "order": 1,
+      "display": true,
+      "deliverables": []
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 2,
+    "fields": {
+      "icon": "images/blueprint.png",
+      "service_type": "primary",
+      "title": "Custom Web App Build",
+      "slug": "custom-web-app-build",
+      "short_description": "Need a solution that requires something a little more flexible than the big platforms?\r\n\r\nSometimes new, revolutionary ideas, or ideas that need to happen FAST and CHEAP only have ONE REAL OPTION:\r\n\r\nBeing built from scratch.\r\n\r\nUsing the power of Django and the web stack (html, css, and javascript), you can have your own lightweight but POWERFUL web apps that can bring your ideas to life.\r\n\r\nHire me (and my team) to build you a website TAILORED to your specific needs, goal, and brand today.",
+      "long_description": "<p>Need a solution that requires something a little more flexible than the big platforms?</p>\r\n<p>&nbsp;</p>\r\n<p>Sometimes new, revolutionary ideas, or ideas that need to happen FAST and CHEAP only have ONE REAL OPTION:</p>\r\n<p>&nbsp;</p>\r\n<p>Being built from scratch.</p>\r\n<p>&nbsp;</p>\r\n<p>Using the power of Django and the web stack (html, css, and javascript), you can have your own lightweight but POWERFUL web apps that can bring your ideas to life.</p>\r\n<p>&nbsp;</p>\r\n<p>Hire me (and my team) to build you a website TAILORED to your specific needs, goal, and brand today.</p>",
+      "created_date": "2020-09-15T14:12:35.175Z",
+      "price": "80.00",
+      "payment_type": "hourly",
+      "call_to_action": "Order Now",
+      "order": 2,
+      "display": true,
+      "deliverables": []
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 3,
+    "fields": {
+      "icon": "images/skills.png",
+      "service_type": "primary",
+      "title": "Code Mentoring",
+      "slug": "code-mentoring",
+      "short_description": "For those of you interested in coding!\r\n\r\nWant to learn how to build awesome valuable websites, web apps, and automations directly from me?\r\n\r\nWant to make money from it?\r\n\r\nI've done both of these in less than a year since I started coding, and if I would've known what I knew now, I could've done it in a 3rd of the time.\r\n\r\nYou can now hire me to mentor you directly teach you how to code and building a profitable freelancing career.\r\n\r\nBe sure to take notes, and start today!",
+      "long_description": "<p>For those of you interested in coding!</p>\r\n<p>&nbsp;</p>\r\n<p>Want to learn how to build awesome valuable websites, web apps, and automations directly from me?</p>\r\n<p>&nbsp;</p>\r\n<p>Want to make money from it?</p>\r\n<p>&nbsp;</p>\r\n<p>I've done both of these in less than a year since I started coding, and if I would've known what I knew now, I could've done it in a 3rd of the time.</p>\r\n<p>&nbsp;</p>\r\n<p>You can now hire me to mentor you directly teach you how to code and building a profitable freelancing career.</p>\r\n<p>&nbsp;</p>\r\n<p>Be sure to take notes, and start today!</p>",
+      "created_date": "2020-09-15T14:14:00.878Z",
+      "price": "80.00",
+      "payment_type": "hourly",
+      "call_to_action": "Order Now",
+      "order": 3,
+      "display": true,
+      "deliverables": []
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 4,
+    "fields": {
+      "icon": "images/f_logo_RGB-Blue_512.png",
+      "service_type": "standard",
+      "title": "Facebook Ads Consulting",
+      "slug": "facebook-ads-consulting",
+      "short_description": "\"I hate Facebook Ads.\" ~ Many people.\r\n\r\nFacebook Ads are an effective marketing method that gives you loads of insights and can bring AMAZING purchase traffic to your website or cause, bringing you people eager to sign up for your services, newsletters, etc. and buy your products.\r\n\r\nHowever, the landscape is ALWAYS changing, the algorithm breaks things, and people get hurt. \r\n\r\nA lot. \r\n\r\nI do offer help help in this area.",
+      "long_description": "<p>\"I hate Facebook Ads.\" ~ Many people.</p>\r\n<p>&nbsp;</p>\r\n<p>Facebook Ads are an effective marketing method that gives you loads of insights and can bring AMAZING purchase traffic to your website or cause, bringing you people eager to sign up for your services, newsletters, etc. and buy your products.</p>\r\n<p>&nbsp;</p>\r\n<p>However, the landscape is ALWAYS changing, the algorithm breaks things, and people get hurt.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>A lot.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>If you're reading this, I'd assume at least one of the following happened:</p>\r\n<ol>\r\n<li>Your ad got rejected and you don't know why</li>\r\n<li>Your Facebook Pixel isn't working correctly.</li>\r\n<li>Facebook is giving you an unclear reason as to why something isn't working</li>\r\n<li>You checked out a lot of Facebook's content, and you still don't feel like you understand the bigger picture.</li>\r\n<li>Facebook's offical \"Facebook Reps\" couldn't help you, likely because they have no actual clue what they're talking about. Really, it's a problem.</li>\r\n</ol>\r\n<p>&nbsp;</p>\r\n<p>I personally don't enjoy Facebook Ads AT ALL. I just happen to have a lot experience with them.</p>\r\n<p>&nbsp;</p>\r\n<p>My prices for this service are high. This is a deterrant 🙂.</p>\r\n<p>&nbsp;</p>\r\n<p>You see, while I don't enjoy Facebook Ads, I do also recognize that Facebook Ads are useful when used and built effectively, and for some people they're quite valuable.</p>\r\n<p>&nbsp;</p>\r\n<p>The alternative for me would be to NOT offer my expertise and keep it dormant to not help anyone.</p>\r\n<p>&nbsp;</p>\r\n<p>But, I realized I can use the money earned from these services to invest in myself, my family, my network, my companies, charities, and other channels that can help me make a massive positive impact on the lives of others :)</p>\r\n<p>&nbsp;</p>\r\n<p>So at a higher rate, this does become worth it to me 🙂.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>I actually don't recommend you hire me for this because I'd rather do almost any other part of marketing and I'm severely burnt out of Facebook Ads.</p>\r\n<p>&nbsp;</p>\r\n<p>But if you do hire me for my consulting services, I'll do everything I can to make it worth while, as you paying me the rate I've set does make it worth while for me 😊.</p>\r\n<p>&nbsp;</p>\r\n<p>PS: For this service, I do not and will not offer a discounted rate. In fact, if you try to negotiate, the price will only go up. This is also a deterrent 😁.</p>",
+      "created_date": "2021-05-03T07:34:19.157Z",
+      "price": "500.00",
+      "payment_type": "hourly",
+      "call_to_action": "Book a Call",
+      "order": 4,
+      "display": true,
+      "deliverables": []
+    }
+  }
+]

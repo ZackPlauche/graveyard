@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="display: flex; height: 100vh; align-items: center; justify-content: center; flex-flow: column;">
+  <h1>Welcome to the site!</h1>
+  <a style="background-color: black; color: white; text-decoration: none; padding: 10px; display: inline-block;" href="{% url 'service_list' %}">View Services</a>
+</div>
+{% endblock content %}

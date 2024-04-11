@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+    <head>
+        {% load static wagtailuserbar %}
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {# Google Fonts #}
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+				rel="stylesheet"
+				type="text/css"
+			/>
+		</noscript>
+        {# Font Awesome CDN #}
+        <link
+			rel="preload"
+			href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+			integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"
+		/>
+		<noscript>
+			<link
+				href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+				rel="stylesheet"
+				type="text/css"
+				integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"
+			/>
+		</noscript>
+        {# Custom Styles #}
+        <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+
+        {# Favicon #}
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+        {# Google Anatlyics #}
+        {% if not request.is_preview %}
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-N13QGNC7FT"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-N13QGNC7FT');
+            </script>
+        {% endif %}
+
+        {% block head %}{% endblock %}
+
+        <title>
+            {% block title %}
+            {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+            {% with self.get_site.site_name as site_name %}
+            {% if site_name %}| {{ site_name }}{% endif %}
+            {% endwith %}
+            {% endblock %}
+        </title>
+        
+    </head>
+
+    <body class="{% block body_class %}test-theme{% endblock %}">
+        {% wagtailuserbar %}
+
+        {% include 'includes/header.html' %}
+
+        <main class="{% block page_class %}{% endblock %}" style="min-height: calc(100vh - var(--navbar-height))">
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include 'includes/footer.html' %}
+        
+        <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+	<script>	 $(function() {
+        $('.lazy').Lazy();
+    });</script> 
+    </body>
+
+</html>

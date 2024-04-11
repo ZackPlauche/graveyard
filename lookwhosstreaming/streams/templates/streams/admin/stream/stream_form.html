@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Schedule | Look Who's Streaming
+{% endblock title %}
+
+{% block breadcrumbs %}
+<li><a href="{% url 'streams:stream_list' %}" class="back">Back</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="admin">
+  <div class="add-streamer">
+    <div class="admin-header">
+      <h1>{% if stream %}Update{% else %}Add{% endif %} Stream</h1>
+      <p>Schedule a stream or upload a list of streams.<br><small>Fields with * are required.</small></p>
+    </div>
+    <div class="forms">
+
+      {% if not stream %}
+      <!-- Bulk Schedule Form -->
+      <form method="POST" class="admin-form" id="streamer-csv-form" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Add Stream Schedule</h2>
+        {{ form2 }}
+
+        <button type="submit" name="upload_file">Upload File</button>
+      </form>
+      {% endif %}
+
+      <!-- Stream Form -->
+      <form method="POST" id="streamer-form" class="admin-form">
+        {% csrf_token %}
+        <h2>Schedule Stream</h2>
+        {% if form.errors %}
+        {% for error in form.errors %}
+        {{ error|escape }}
+        {% endfor %}
+        {% endif %}
+        {% for field in form %}
+        <p class="field-group">
+          <label for="{{ field.name }}">{{ field.label }}{% if field.field.required %}*{% endif %}</label>
+          {{ field }}
+          {% if field.help_text %}
+          <small>{{ field.help_text }}</small>
+          {% endif %}
+          {% if field.errors %}
+          {% for error in field.errors %}
+          <div class="error">
+            {{ error }}
+          </div>
+          {% endfor %}
+          {% endif %}
+        </p>
+        {% endfor %}
+        <button type="submit" name="add_streamer">{% if stream %}Update{% endif %}Schedule Stream</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+{% endblock main %}

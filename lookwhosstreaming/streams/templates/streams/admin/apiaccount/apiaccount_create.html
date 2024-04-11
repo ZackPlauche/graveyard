@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block breadcrumbs %}
+<li><a href="{% url 'streams:apiaccount_list' %}" class="back">Back</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="admin">
+  <div class="api-accounts">
+    <div class="admin-header">
+      <h1>Add API Account</h1>
+    </div>
+
+    <!-- Bulk Streamer Form -->
+    <form method="POST" class="admin-form" id="streamer-csv-form" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h2>Bulk Add API Accounts</h2>
+      <p class="field-group">
+        <label for="csv">Upload CSV File</label>
+        <input type="file" name="csv" accept=".csv" id="id_csv">
+      </p>
+      <button type="submit" name="upload_file">Upload File</button>
+    </form>
+
+    <form class="admin-form" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% for field in form %}
+      <p>
+        {{ field.label }}{% if field.field.required %}*{% endif %}
+        {{ field }}
+        {% if field.errors %}
+        {{ field.errors }}
+        {% endif %}
+      </p>
+      {% endfor %}
+      <button type="submit">Add Account</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

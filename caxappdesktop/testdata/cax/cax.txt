@@ -1,0 +1,2436 @@
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+;
+;
+[C9001]  
+DESC.001 =  Factor for complete compensation (cutoff ramp)
+DESC.002 = AccPed_facCompTot_C  
+VIEW =     2    "Factor for complete compensation (cutoff ramp)"              "AccPed_facCompTot_C"           ""      1   1  0  0  
+ADDR =     81A10                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.000122070313              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9002]  
+DESC.001 =  Maximum engine speed in case of accelerator pedal error
+DESC.002 = AccPed_nMax_C  
+VIEW =     2    "Maximum engine speed in case of accelerator pedal error"              "AccPed_nMax_C"           ""      1   1  0  0  
+ADDR =     81A04                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9003]  
+DESC.001 =  Minimum engine speed in case of accelerator pedal brake implausibility
+DESC.002 = AccPed_nMinBrkApp_C  
+VIEW =     2    "Minimum engine speed in case of accelerator pedal brake implausibility"              "AccPed_nMinBrkApp_C"           ""      1   1  0  0  
+ADDR =     81A06                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9004]  
+DESC.001 =  Minimum engine speed in case of accelerator pedal error and trodden brake
+DESC.002 = AccPed_nMinBrk_C  
+VIEW =     2    "Minimum engine speed in case of accelerator pedal error and trodden brake"              "AccPed_nMinBrk_C"           ""      1   1  0  0  
+ADDR =     81A08                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9005]  
+DESC.001 =  Minimum engine speed in case of accelerator pedal error and brake not applied
+DESC.002 = AccPed_nMinNoBrk_C  
+VIEW =     2    "Minimum engine speed in case of accelerator pedal error and brake not applied"              "AccPed_nMinNoBrk_C"           ""      1   1  0  0  
+ADDR =     81A0A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9006]  
+DESC.001 =  Maximum wheel torque in case of accelerator pedal error
+DESC.002 = AccPed_trqLimMax_C  
+VIEW =     2    "Maximum wheel torque in case of accelerator pedal error"              "AccPed_trqLimMax_C"           ""      1   1  0  0  
+ADDR =     81A0C                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9007]  
+DESC.001 =  Actuator test ACCtlCmpr_ATS / Tester demand monitoring enable mask for actuators
+DESC.002 = ACCtlCmpr_ATS.LimitTypeMsk_C  
+VIEW =     2    "Actuator test ACCtlCmpr_ATS / Tester demand monitoring enable mask for actuators"              "ACCtlCmpr_ATS.LimitTypeMsk_C"           ""      1   1  0  0  
+ADDR =     815D8                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9008]  
+DESC.001 =  Actuator test ACCtlCmpr_ATS / Conversion norm used for conversion to/from internal scaling
+DESC.002 = ACCtlCmpr_ATS.CnvNorm_C  
+VIEW =     2    "Actuator test ACCtlCmpr_ATS / Conversion norm used for conversion to/from internal scaling"              "ACCtlCmpr_ATS.CnvNorm_C"           ""      1   1  0  0  
+ADDR =     815D9                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9009]  
+DESC.001 =  Input selection for intake air temperature
+DESC.002 = ACCtl_numTAirIn_C  
+VIEW =     2    "Input selection for intake air temperature"              "ACCtl_numTAirIn_C"           ""      1   1  0  0  
+ADDR =     80679                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9010]  
+DESC.001 =  Input selection for engine coolant temperature
+DESC.002 = ACCtl_numTClnt_C  
+VIEW =     2    "Input selection for engine coolant temperature"              "ACCtl_numTClnt_C"           ""      1   1  0  0  
+ADDR =     8067A                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9011]  
+DESC.001 =  Minimum AC coolant pressure to enable anti slug
+DESC.002 = ACCtl_pClntMinAntiSlug_C  
+VIEW =     2    "Minimum AC coolant pressure to enable anti slug"              "ACCtl_pClntMinAntiSlug_C"           ""      1   1  0  0  
+ADDR =     80684                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = hPa                     2              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9012]  
+DESC.001 =  Accelerator pedal position for fast drive away vehicle operation
+DESC.002 = ACCtl_rAPPLnchCond_CUR  
+VIEW =     2    "Accelerator pedal position for fast drive away vehicle operation"              "ACCtl_rAPPLnchCond_CUR"           "Epm_nEng"      1   2  0  0  
+ADDR =     80694                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             "@C9012x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9012x]  
+DESC.001 =  Accelerator pedal position for fast drive away vehicle operation
+DESC.002 = ACCtl_rAPPLnchCond_CUR  
+VIEW =     2    "Accelerator pedal position for fast drive away vehicle operation"              "X Axis"           "X Axis"      1   2  0  0  
+ADDR =     8068A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3, 4"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9013]  
+DESC.001 =  Upper threshold for accelerator pedal position for maximum vehicle performance condition
+DESC.002 = ACCtl_rAPPThresHiMaxPwr_C  
+VIEW =     2    "Upper threshold for accelerator pedal position for maximum vehicle performance condition"              "ACCtl_rAPPThresHiMaxPwr_C"           ""      1   1  0  0  
+ADDR =     8069E                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9014]  
+DESC.001 =  Minimum intake air temperature during RUN/CRANK transition to enable anti slug
+DESC.002 = ACCtl_tAirInAntiSlug_C  
+VIEW =     2    "Minimum intake air temperature during RUN/CRANK transition to enable anti slug"              "ACCtl_tAirInAntiSlug_C"           ""      1   1  0  0  
+ADDR =     806A4                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = deg C                     0.1              273.14    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9015]  
+DESC.001 =  Lower engine coolant temperature threshold for AC compressor shut-off
+DESC.002 = ACCtl_tEngMaxLo_C  
+VIEW =     2    "Lower engine coolant temperature threshold for AC compressor shut-off"              "ACCtl_tEngMaxLo_C"           ""      1   1  0  0  
+ADDR =     806B0                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = deg C                     0.1              273.14    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9016]  
+DESC.001 =  Minimum time for engine speed below minimum to disengage AC compressor
+DESC.002 = ACCtl_tiNEngMinACOn_C  
+VIEW =     2    "Minimum time for engine speed below minimum to disengage AC compressor"              "ACCtl_tiNEngMinACOn_C"           ""      1   1  0  0  
+ADDR =     80740                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     0.01              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9017]  
+DESC.001 =  Upper threshold for minimum battery voltage to disengage immediately
+DESC.002 = ACCtl_uBattMinHi_C  
+VIEW =     2    "Upper threshold for minimum battery voltage to disengage immediately"              "ACCtl_uBattMinHi_C"           ""      1   1  0  0  
+ADDR =     8074E                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = mV                     20              0    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9018]  
+DESC.001 =  Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration
+DESC.002 = AFS_rAirThresRgnHi_MAP  
+VIEW =     2    "Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration"              "AFS_rAirThresRgnHi_MAP"           "InjCtl_qCurr"      1   3  0  0  
+ADDR =     81402                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.001              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9018y"                 
+SI_ROW = .             "@C9018x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9018x]  
+DESC.001 =  Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration
+DESC.002 = AFS_rAirThresRgnHi_MAP  
+VIEW =     2    "Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration"              "X Axis"           "X Axis"      1   3  0  0  
+ADDR =     813F2                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = mm^3/hub                     0.01              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9018y]  
+DESC.001 =  Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration
+DESC.002 = AFS_rAirThresRgnHi_MAP  
+VIEW =     2    "Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration"              "Y Axis"           "Y Axis"      1   3  0  0  
+ADDR =     81402                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.001              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9018y"                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9019]  
+DESC.001 =  Switch to select a temperature from various temperatures
+DESC.002 = Air_numTempFldTAFS_C  
+VIEW =     2    "Switch to select a temperature from various temperatures"              "Air_numTempFldTAFS_C"           ""      1   1  0  0  
+ADDR =     811AD                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9020]  
+DESC.001 =  Structure to hold SRC thresholds for adc voltage value of air temperature at HFM / Threshold for SRC -Max detection
+DESC.002 = Air_SRCTAFS.uMax_C  
+VIEW =     2    "Structure to hold SRC thresholds for adc voltage value of air temperature at HFM / Threshold for SRC -Max detection"              "Air_SRCTAFS.uMax_C"           ""      1   1  0  0  
+ADDR =     81142                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = mV                     0.2              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9021]  
+DESC.001 =  Switch to consider plausibility by Add-on heater detection
+DESC.002 = Air_swtAOHEnaTAFS_C  
+VIEW =     2    "Switch to consider plausibility by Add-on heater detection"              "Air_swtAOHEnaTAFS_C"           ""      1   1  0  0  
+ADDR =     811AF                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9022]  
+DESC.001 =  Switch to indicate whether the sensor is present or not
+DESC.002 = Air_swtSensPresTAFS_C  
+VIEW =     2    "Switch to indicate whether the sensor is present or not"              "Air_swtSensPresTAFS_C"           ""      1   1  0  0  
+ADDR =     811B0                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9023]  
+DESC.001 =  Switch to consider plausibility by Sun Load detection
+DESC.002 = Air_swtSunLdEnaTAFS_C  
+VIEW =     2    "Switch to consider plausibility by Sun Load detection"              "Air_swtSunLdEnaTAFS_C"           ""      1   1  0  0  
+ADDR =     811B1                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9024]  
+DESC.001 =  Switch to select between sensed or final value of air temperature for the plausibility check.
+DESC.002 = Air_swtTempInSigTAFS_C  
+VIEW =     2    "Switch to select between sensed or final value of air temperature for the plausibility check."              "Air_swtTempInSigTAFS_C"           ""      1   1  0  0  
+ADDR =     811B2                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9025]  
+DESC.001 =  Minimum engine off time required to perform the plausibility function
+DESC.002 = Air_tiMinSnceStopTAFS_C  
+VIEW =     2    "Minimum engine off time required to perform the plausibility function"              "Air_tiMinSnceStopTAFS_C"           ""      1   1  0  0  
+ADDR =     8123C                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9026]  
+DESC.001 =  Value to select different field of Air temperature field
+DESC.002 = SunLd_idxAirTempDet_C  
+VIEW =     2    "Value to select different field of Air temperature field"              "SunLd_idxAirTempDet_C"           ""      1   1  0  0  
+ADDR =     81A20                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9027]  
+DESC.001 =  Map to calculate the substitute value for air flow signal in case of errors
+DESC.002 = AFS_dmAirSubsVal_MAP  
+VIEW =     2    "Map to calculate the substitute value for air flow signal in case of errors"              "AFS_dmAirSubsVal_MAP"           "ASMod_pIndVol"      1   3  0  0  
+ADDR =     4B168                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Kg/h                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9027y"                 
+SI_ROW = .             "@C9027x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9027x]  
+DESC.001 =  Map to calculate the substitute value for air flow signal in case of errors
+DESC.002 = AFS_dmAirSubsVal_MAP  
+VIEW =     2    "Map to calculate the substitute value for air flow signal in case of errors"              "X Axis"           "X Axis"      1   3  0  0  
+ADDR =     4B148                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = hPa                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9027y]  
+DESC.001 =  Map to calculate the substitute value for air flow signal in case of errors
+DESC.002 = AFS_dmAirSubsVal_MAP  
+VIEW =     2    "Map to calculate the substitute value for air flow signal in case of errors"              "Y Axis"           "Y Axis"      1   3  0  0  
+ADDR =     4B168                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Kg/h                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9027y"                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9028]  
+DESC.001 =  This is the Pedal Map 2. Size is 9 x 9
+DESC.002 = AccPed_trqEng2_MAP  
+VIEW =     2    "This is the Pedal Map 2. Size is 9 x 9"              "AccPed_trqEng2_MAP"           "APP_r"      1   3  0  0  
+ADDR =     4F190                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9028y"                 
+SI_ROW = .             "@C9028x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9028x]  
+DESC.001 =  This is the Pedal Map 2. Size is 9 x 9
+DESC.002 = AccPed_trqEng2_MAP  
+VIEW =     2    "This is the Pedal Map 2. Size is 9 x 9"              "X Axis"           "X Axis"      1   3  0  0  
+ADDR =     4F170                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9028y]  
+DESC.001 =  This is the Pedal Map 2. Size is 9 x 9
+DESC.002 = AccPed_trqEng2_MAP  
+VIEW =     2    "This is the Pedal Map 2. Size is 9 x 9"              "Y Axis"           "Y Axis"      1   3  0  0  
+ADDR =     4F190                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9028y"                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9029]  
+DESC.001 =  Normal load invalid evaluaton behaviour for electrical controlled AC types
+DESC.002 = ACComp_swtNrmLdInvld_C  
+VIEW =     2    "Normal load invalid evaluaton behaviour for electrical controlled AC types"              "ACComp_swtNrmLdInvld_C"           ""      1   1  0  0  
+ADDR =     9C2EA                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9030]  
+DESC.001 =  OFF time delay for desired torque
+DESC.002 = ACComp_tiDlyTrqDesOff_C  
+VIEW =     2    "OFF time delay for desired torque"              "ACComp_tiDlyTrqDesOff_C"           ""      1   1  0  0  
+ADDR =     9C2EC                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     0.01              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9031]  
+DESC.001 =  ON time delay for desired torque
+DESC.002 = ACComp_tiDlyTrqDesOn_C  
+VIEW =     2    "ON time delay for desired torque"              "ACComp_tiDlyTrqDesOn_C"           ""      1   1  0  0  
+ADDR =     9C2EE                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     0.01              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9032]  
+DESC.001 =  Filter time for desired torque for ECVD systems
+DESC.002 = ACComp_tiTrqCmprECU_C  
+VIEW =     2    "Filter time for desired torque for ECVD systems"              "ACComp_tiTrqCmprECU_C"           ""      1   1  0  0  
+ADDR =     9C2F0                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     4294.967295999993              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9033]  
+DESC.001 =  Desired AC compressor torque for non ECVD AC systems
+DESC.002 = ACComp_trqCmprDes_MAP  
+VIEW =     2    "Desired AC compressor torque for non ECVD AC systems"              "ACComp_trqCmprDes_MAP"           "AirC_pClnt"      1   3  0  0  
+ADDR =     9C30A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9033y"                 
+SI_ROW = .             "@C9033x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9033x]  
+DESC.001 =  Desired AC compressor torque for non ECVD AC systems
+DESC.002 = ACComp_trqCmprDes_MAP  
+VIEW =     2    "Desired AC compressor torque for non ECVD AC systems"              "X Axis"           "X Axis"      1   3  0  0  
+ADDR =     9C302                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = hPa                     2              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9033y]  
+DESC.001 =  Desired AC compressor torque for non ECVD AC systems
+DESC.002 = ACComp_trqCmprDes_MAP  
+VIEW =     2    "Desired AC compressor torque for non ECVD AC systems"              "Y Axis"           "Y Axis"      1   3  0  0  
+ADDR =     9C30A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9033y"                 
+SI_ROW = .             "1, 2, 3"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9034]  
+DESC.001 =  Slope for the map switching ramps
+DESC.002 = AccPed_dfacMapSwt_C  
+VIEW =     2    "Slope for the map switching ramps"              "AccPed_dfacMapSwt_C"           ""      1   1  0  0  
+ADDR =     A0C84                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = 1/s                     0.015258789063              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9035]  
+DESC.001 =  This is the factor for the future map above which that Map mode is reported as the current used Map Mode via the GMLAN signal Throttle Progression Status
+DESC.002 = AccPed_facEngModeDet_C  
+VIEW =     2    "This is the factor for the future map above which that Map mode is reported as the current used Map Mode via the GMLAN signal Throttle Progression Status"              "AccPed_facEngModeDet_C"           ""      1   1  0  0  
+ADDR =     A0C86                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.000122070313              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9036]  
+DESC.001 =  Accelerator pedal position above which full-open throttle is recognised
+DESC.002 = AccPed_rFulThr_C  
+VIEW =     2    "Accelerator pedal position above which full-open throttle is recognised"              "AccPed_rFulThr_C"           ""      1   1  0  0  
+ADDR =     A0C88                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9037]  
+DESC.001 =  Accelerator pedal position below which idle/coast is recognised
+DESC.002 = AccPed_rIdl_C  
+VIEW =     2    "Accelerator pedal position below which idle/coast is recognised"              "AccPed_rIdl_C"           ""      1   1  0  0  
+ADDR =     A0C8A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9038]  
+DESC.001 =  Threshold between overrun and propulsion
+DESC.002 = AccPed_rThresPrp_C  
+VIEW =     2    "Threshold between overrun and propulsion"              "AccPed_rThresPrp_C"           ""      1   1  0  0  
+ADDR =     A0C8C                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9039]  
+DESC.001 =  Maximum drift limt for correction factors in low idle
+DESC.002 = AFS_facIdlAdjValMax_C  
+VIEW =     2    "Maximum drift limt for correction factors in low idle"              "AFS_facIdlAdjValMax_C"           ""      1   1  0  0  
+ADDR =     9C5E4                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.000122070313              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9040]  
+DESC.001 =  Minimum drift limt for correction factor in load range.
+DESC.002 = AFS_facLdAdjValMin_C  
+VIEW =     2    "Minimum drift limt for correction factor in load range."              "AFS_facLdAdjValMin_C"           ""      1   1  0  0  
+ADDR =     9C5EC                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.000122070313              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9041]  
+DESC.001 =  Index for selection of environmental temperature
+DESC.002 = AFS_numEnvTemp_C  
+VIEW =     2    "Index for selection of environmental temperature"              "AFS_numEnvTemp_C"           ""      1   1  0  0  
+ADDR =     9C60D                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9042]  
+DESC.001 =  Bit mask to select Air-Control monitoring shut-off for learning points relese
+DESC.002 = AFS_stAirCtlBitsMsk_C  
+VIEW =     2    "Bit mask to select Air-Control monitoring shut-off for learning points relese"              "AFS_stAirCtlBitsMsk_C"           ""      1   1  0  0  
+ADDR =     9C614                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9043]  
+DESC.001 =  Software switch to release the drift compensation (1: compensation is released, 0: no compensation)
+DESC.002 = AFS_swtCurrAdjRls_C  
+VIEW =     2    "Software switch to release the drift compensation (1: compensation is released, 0: no compensation)"              "AFS_swtCurrAdjRls_C"           ""      1   1  0  0  
+ADDR =     9C618                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9044]  
+DESC.001 =  Lower induction air temperature threshold to fulfill the environmental condition [deg C]
+DESC.002 = AFS_tAirAdjRlsThresLo_C  
+VIEW =     2    "Lower induction air temperature threshold to fulfill the environmental condition [deg C]"              "AFS_tAirAdjRlsThresLo_C"           ""      1   1  0  0  
+ADDR =     9C61C                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = deg C                     0.1              273.14    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9045]  
+DESC.001 =  Lower environmental temperature threshold to fulfill the environmental condition [deg C]
+DESC.002 = AFS_tEnvAdjRlsThresLo_C  
+VIEW =     2    "Lower environmental temperature threshold to fulfill the environmental condition [deg C]"              "AFS_tEnvAdjRlsThresLo_C"           ""      1   1  0  0  
+ADDR =     9C620                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = deg C                     0.1              273.14    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9046]  
+DESC.001 =  Time constant for filtering the boost pressure gradient [ms]
+DESC.002 = AFS_tiBstPresPT1_C  
+VIEW =     2    "Time constant for filtering the boost pressure gradient [ms]"              "AFS_tiBstPresPT1_C"           ""      1   1  0  0  
+ADDR =     9C624                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = ms                     4294967.29599999357              0    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9047]  
+DESC.001 =  Structure containing ramp slopes for response in case of errors air temperature sensor at HFM / Slope if the ramp has to be increased
+DESC.002 = Air_RmpSlpTAFS.Pos_C  
+VIEW =     2    "Structure containing ramp slopes for response in case of errors air temperature sensor at HFM / Slope if the ramp has to be increased"              "Air_RmpSlpTAFS.Pos_C"           ""      1   1  0  0  
+ADDR =     9C38C                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = K/s                     0.001525878906              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+;
+;
+[C9001]  
+DESC.001 =  Factor for complete compensation (cutoff ramp)
+DESC.002 = AccPed_facCompTot_C  
+VIEW =     2    "Factor for complete compensation (cutoff ramp)"              "AccPed_facCompTot_C"           ""      1   1  0  0  
+ADDR =     81A10                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.000122070313              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9002]  
+DESC.001 =  Maximum engine speed in case of accelerator pedal error
+DESC.002 = AccPed_nMax_C  
+VIEW =     2    "Maximum engine speed in case of accelerator pedal error"              "AccPed_nMax_C"           ""      1   1  0  0  
+ADDR =     81A04                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9003]  
+DESC.001 =  Minimum engine speed in case of accelerator pedal brake implausibility
+DESC.002 = AccPed_nMinBrkApp_C  
+VIEW =     2    "Minimum engine speed in case of accelerator pedal brake implausibility"              "AccPed_nMinBrkApp_C"           ""      1   1  0  0  
+ADDR =     81A06                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9004]  
+DESC.001 =  Minimum engine speed in case of accelerator pedal error and trodden brake
+DESC.002 = AccPed_nMinBrk_C  
+VIEW =     2    "Minimum engine speed in case of accelerator pedal error and trodden brake"              "AccPed_nMinBrk_C"           ""      1   1  0  0  
+ADDR =     81A08                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9005]  
+DESC.001 =  Minimum engine speed in case of accelerator pedal error and brake not applied
+DESC.002 = AccPed_nMinNoBrk_C  
+VIEW =     2    "Minimum engine speed in case of accelerator pedal error and brake not applied"              "AccPed_nMinNoBrk_C"           ""      1   1  0  0  
+ADDR =     81A0A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9006]  
+DESC.001 =  Maximum wheel torque in case of accelerator pedal error
+DESC.002 = AccPed_trqLimMax_C  
+VIEW =     2    "Maximum wheel torque in case of accelerator pedal error"              "AccPed_trqLimMax_C"           ""      1   1  0  0  
+ADDR =     81A0C                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9007]  
+DESC.001 =  Actuator test ACCtlCmpr_ATS / Tester demand monitoring enable mask for actuators
+DESC.002 = ACCtlCmpr_ATS.LimitTypeMsk_C  
+VIEW =     2    "Actuator test ACCtlCmpr_ATS / Tester demand monitoring enable mask for actuators"              "ACCtlCmpr_ATS.LimitTypeMsk_C"           ""      1   1  0  0  
+ADDR =     815D8                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9008]  
+DESC.001 =  Actuator test ACCtlCmpr_ATS / Conversion norm used for conversion to/from internal scaling
+DESC.002 = ACCtlCmpr_ATS.CnvNorm_C  
+VIEW =     2    "Actuator test ACCtlCmpr_ATS / Conversion norm used for conversion to/from internal scaling"              "ACCtlCmpr_ATS.CnvNorm_C"           ""      1   1  0  0  
+ADDR =     815D9                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9009]  
+DESC.001 =  Input selection for intake air temperature
+DESC.002 = ACCtl_numTAirIn_C  
+VIEW =     2    "Input selection for intake air temperature"              "ACCtl_numTAirIn_C"           ""      1   1  0  0  
+ADDR =     80679                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9010]  
+DESC.001 =  Input selection for engine coolant temperature
+DESC.002 = ACCtl_numTClnt_C  
+VIEW =     2    "Input selection for engine coolant temperature"              "ACCtl_numTClnt_C"           ""      1   1  0  0  
+ADDR =     8067A                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9011]  
+DESC.001 =  Minimum AC coolant pressure to enable anti slug
+DESC.002 = ACCtl_pClntMinAntiSlug_C  
+VIEW =     2    "Minimum AC coolant pressure to enable anti slug"              "ACCtl_pClntMinAntiSlug_C"           ""      1   1  0  0  
+ADDR =     80684                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = hPa                     2              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9012]  
+DESC.001 =  Accelerator pedal position for fast drive away vehicle operation
+DESC.002 = ACCtl_rAPPLnchCond_CUR  
+VIEW =     2    "Accelerator pedal position for fast drive away vehicle operation"              "ACCtl_rAPPLnchCond_CUR"           "Epm_nEng"      1   2  0  0  
+ADDR =     80694                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             "@C9012x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9012x]  
+DESC.001 =  Accelerator pedal position for fast drive away vehicle operation
+DESC.002 = ACCtl_rAPPLnchCond_CUR  
+VIEW =     2    "Accelerator pedal position for fast drive away vehicle operation"              "X Axis"           "X Axis"      1   2  0  0  
+ADDR =     8068A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = rpm                     0.5              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3, 4"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9013]  
+DESC.001 =  Upper threshold for accelerator pedal position for maximum vehicle performance condition
+DESC.002 = ACCtl_rAPPThresHiMaxPwr_C  
+VIEW =     2    "Upper threshold for accelerator pedal position for maximum vehicle performance condition"              "ACCtl_rAPPThresHiMaxPwr_C"           ""      1   1  0  0  
+ADDR =     8069E                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9014]  
+DESC.001 =  Minimum intake air temperature during RUN/CRANK transition to enable anti slug
+DESC.002 = ACCtl_tAirInAntiSlug_C  
+VIEW =     2    "Minimum intake air temperature during RUN/CRANK transition to enable anti slug"              "ACCtl_tAirInAntiSlug_C"           ""      1   1  0  0  
+ADDR =     806A4                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = deg C                     0.1              273.14    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9015]  
+DESC.001 =  Lower engine coolant temperature threshold for AC compressor shut-off
+DESC.002 = ACCtl_tEngMaxLo_C  
+VIEW =     2    "Lower engine coolant temperature threshold for AC compressor shut-off"              "ACCtl_tEngMaxLo_C"           ""      1   1  0  0  
+ADDR =     806B0                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = deg C                     0.1              273.14    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9016]  
+DESC.001 =  Minimum time for engine speed below minimum to disengage AC compressor
+DESC.002 = ACCtl_tiNEngMinACOn_C  
+VIEW =     2    "Minimum time for engine speed below minimum to disengage AC compressor"              "ACCtl_tiNEngMinACOn_C"           ""      1   1  0  0  
+ADDR =     80740                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     0.01              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9017]  
+DESC.001 =  Upper threshold for minimum battery voltage to disengage immediately
+DESC.002 = ACCtl_uBattMinHi_C  
+VIEW =     2    "Upper threshold for minimum battery voltage to disengage immediately"              "ACCtl_uBattMinHi_C"           ""      1   1  0  0  
+ADDR =     8074E                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = mV                     20              0    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9018]  
+DESC.001 =  Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration
+DESC.002 = AFS_rAirThresRgnHi_MAP  
+VIEW =     2    "Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration"              "AFS_rAirThresRgnHi_MAP"           "InjCtl_qCurr"      1   3  0  0  
+ADDR =     81402                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.001              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9018y"                 
+SI_ROW = .             "@C9018x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9018x]  
+DESC.001 =  Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration
+DESC.002 = AFS_rAirThresRgnHi_MAP  
+VIEW =     2    "Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration"              "X Axis"           "X Axis"      1   3  0  0  
+ADDR =     813F2                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = mm^3/hub                     0.01              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9018y]  
+DESC.001 =  Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration
+DESC.002 = AFS_rAirThresRgnHi_MAP  
+VIEW =     2    "Engine load dependent MAP for calculating higher threshold for the plausibility check of the sensitivity drift during regeneration"              "Y Axis"           "Y Axis"      1   3  0  0  
+ADDR =     81402                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.001              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9018y"                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9019]  
+DESC.001 =  Switch to select a temperature from various temperatures
+DESC.002 = Air_numTempFldTAFS_C  
+VIEW =     2    "Switch to select a temperature from various temperatures"              "Air_numTempFldTAFS_C"           ""      1   1  0  0  
+ADDR =     811AD                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9020]  
+DESC.001 =  Structure to hold SRC thresholds for adc voltage value of air temperature at HFM / Threshold for SRC -Max detection
+DESC.002 = Air_SRCTAFS.uMax_C  
+VIEW =     2    "Structure to hold SRC thresholds for adc voltage value of air temperature at HFM / Threshold for SRC -Max detection"              "Air_SRCTAFS.uMax_C"           ""      1   1  0  0  
+ADDR =     81142                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = mV                     0.2              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9021]  
+DESC.001 =  Switch to consider plausibility by Add-on heater detection
+DESC.002 = Air_swtAOHEnaTAFS_C  
+VIEW =     2    "Switch to consider plausibility by Add-on heater detection"              "Air_swtAOHEnaTAFS_C"           ""      1   1  0  0  
+ADDR =     811AF                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9022]  
+DESC.001 =  Switch to indicate whether the sensor is present or not
+DESC.002 = Air_swtSensPresTAFS_C  
+VIEW =     2    "Switch to indicate whether the sensor is present or not"              "Air_swtSensPresTAFS_C"           ""      1   1  0  0  
+ADDR =     811B0                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9023]  
+DESC.001 =  Switch to consider plausibility by Sun Load detection
+DESC.002 = Air_swtSunLdEnaTAFS_C  
+VIEW =     2    "Switch to consider plausibility by Sun Load detection"              "Air_swtSunLdEnaTAFS_C"           ""      1   1  0  0  
+ADDR =     811B1                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9024]  
+DESC.001 =  Switch to select between sensed or final value of air temperature for the plausibility check.
+DESC.002 = Air_swtTempInSigTAFS_C  
+VIEW =     2    "Switch to select between sensed or final value of air temperature for the plausibility check."              "Air_swtTempInSigTAFS_C"           ""      1   1  0  0  
+ADDR =     811B2                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9025]  
+DESC.001 =  Minimum engine off time required to perform the plausibility function
+DESC.002 = Air_tiMinSnceStopTAFS_C  
+VIEW =     2    "Minimum engine off time required to perform the plausibility function"              "Air_tiMinSnceStopTAFS_C"           ""      1   1  0  0  
+ADDR =     8123C                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9026]  
+DESC.001 =  Value to select different field of Air temperature field
+DESC.002 = SunLd_idxAirTempDet_C  
+VIEW =     2    "Value to select different field of Air temperature field"              "SunLd_idxAirTempDet_C"           ""      1   1  0  0  
+ADDR =     81A20                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9027]  
+DESC.001 =  Map to calculate the substitute value for air flow signal in case of errors
+DESC.002 = AFS_dmAirSubsVal_MAP  
+VIEW =     2    "Map to calculate the substitute value for air flow signal in case of errors"              "AFS_dmAirSubsVal_MAP"           "ASMod_pIndVol"      1   3  0  0  
+ADDR =     4B168                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Kg/h                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9027y"                 
+SI_ROW = .             "@C9027x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9027x]  
+DESC.001 =  Map to calculate the substitute value for air flow signal in case of errors
+DESC.002 = AFS_dmAirSubsVal_MAP  
+VIEW =     2    "Map to calculate the substitute value for air flow signal in case of errors"              "X Axis"           "X Axis"      1   3  0  0  
+ADDR =     4B148                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = hPa                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9027y]  
+DESC.001 =  Map to calculate the substitute value for air flow signal in case of errors
+DESC.002 = AFS_dmAirSubsVal_MAP  
+VIEW =     2    "Map to calculate the substitute value for air flow signal in case of errors"              "Y Axis"           "Y Axis"      1   3  0  0  
+ADDR =     4B168                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Kg/h                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9027y"                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9028]  
+DESC.001 =  This is the Pedal Map 2. Size is 9 x 9
+DESC.002 = AccPed_trqEng2_MAP  
+VIEW =     2    "This is the Pedal Map 2. Size is 9 x 9"              "AccPed_trqEng2_MAP"           "APP_r"      1   3  0  0  
+ADDR =     4F190                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9028y"                 
+SI_ROW = .             "@C9028x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9028x]  
+DESC.001 =  This is the Pedal Map 2. Size is 9 x 9
+DESC.002 = AccPed_trqEng2_MAP  
+VIEW =     2    "This is the Pedal Map 2. Size is 9 x 9"              "X Axis"           "X Axis"      1   3  0  0  
+ADDR =     4F170                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9028y]  
+DESC.001 =  This is the Pedal Map 2. Size is 9 x 9
+DESC.002 = AccPed_trqEng2_MAP  
+VIEW =     2    "This is the Pedal Map 2. Size is 9 x 9"              "Y Axis"           "Y Axis"      1   3  0  0  
+ADDR =     4F190                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9028y"                 
+SI_ROW = .             "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9029]  
+DESC.001 =  Normal load invalid evaluaton behaviour for electrical controlled AC types
+DESC.002 = ACComp_swtNrmLdInvld_C  
+VIEW =     2    "Normal load invalid evaluaton behaviour for electrical controlled AC types"              "ACComp_swtNrmLdInvld_C"           ""      1   1  0  0  
+ADDR =     9C2EA                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9030]  
+DESC.001 =  OFF time delay for desired torque
+DESC.002 = ACComp_tiDlyTrqDesOff_C  
+VIEW =     2    "OFF time delay for desired torque"              "ACComp_tiDlyTrqDesOff_C"           ""      1   1  0  0  
+ADDR =     9C2EC                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     0.01              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9031]  
+DESC.001 =  ON time delay for desired torque
+DESC.002 = ACComp_tiDlyTrqDesOn_C  
+VIEW =     2    "ON time delay for desired torque"              "ACComp_tiDlyTrqDesOn_C"           ""      1   1  0  0  
+ADDR =     9C2EE                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     0.01              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9032]  
+DESC.001 =  Filter time for desired torque for ECVD systems
+DESC.002 = ACComp_tiTrqCmprECU_C  
+VIEW =     2    "Filter time for desired torque for ECVD systems"              "ACComp_tiTrqCmprECU_C"           ""      1   1  0  0  
+ADDR =     9C2F0                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = s                     4294.967295999993              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9033]  
+DESC.001 =  Desired AC compressor torque for non ECVD AC systems
+DESC.002 = ACComp_trqCmprDes_MAP  
+VIEW =     2    "Desired AC compressor torque for non ECVD AC systems"              "ACComp_trqCmprDes_MAP"           "AirC_pClnt"      1   3  0  0  
+ADDR =     9C30A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9033y"                 
+SI_ROW = .             "@C9033x"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9033x]  
+DESC.001 =  Desired AC compressor torque for non ECVD AC systems
+DESC.002 = ACComp_trqCmprDes_MAP  
+VIEW =     2    "Desired AC compressor torque for non ECVD AC systems"              "X Axis"           "X Axis"      1   3  0  0  
+ADDR =     9C302                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = hPa                     2              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "."                 
+SI_ROW = .             "1, 2, 3"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9033y]  
+DESC.001 =  Desired AC compressor torque for non ECVD AC systems
+DESC.002 = ACComp_trqCmprDes_MAP  
+VIEW =     2    "Desired AC compressor torque for non ECVD AC systems"              "Y Axis"           "Y Axis"      1   3  0  0  
+ADDR =     9C30A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = Nm                     0.1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             "@C9033y"                 
+SI_ROW = .             "1, 2, 3"                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9034]  
+DESC.001 =  Slope for the map switching ramps
+DESC.002 = AccPed_dfacMapSwt_C  
+VIEW =     2    "Slope for the map switching ramps"              "AccPed_dfacMapSwt_C"           ""      1   1  0  0  
+ADDR =     A0C84                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = 1/s                     0.015258789063              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9035]  
+DESC.001 =  This is the factor for the future map above which that Map mode is reported as the current used Map Mode via the GMLAN signal Throttle Progression Status
+DESC.002 = AccPed_facEngModeDet_C  
+VIEW =     2    "This is the factor for the future map above which that Map mode is reported as the current used Map Mode via the GMLAN signal Throttle Progression Status"              "AccPed_facEngModeDet_C"           ""      1   1  0  0  
+ADDR =     A0C86                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.000122070313              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9036]  
+DESC.001 =  Accelerator pedal position above which full-open throttle is recognised
+DESC.002 = AccPed_rFulThr_C  
+VIEW =     2    "Accelerator pedal position above which full-open throttle is recognised"              "AccPed_rFulThr_C"           ""      1   1  0  0  
+ADDR =     A0C88                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9037]  
+DESC.001 =  Accelerator pedal position below which idle/coast is recognised
+DESC.002 = AccPed_rIdl_C  
+VIEW =     2    "Accelerator pedal position below which idle/coast is recognised"              "AccPed_rIdl_C"           ""      1   1  0  0  
+ADDR =     A0C8A                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9038]  
+DESC.001 =  Threshold between overrun and propulsion
+DESC.002 = AccPed_rThresPrp_C  
+VIEW =     2    "Threshold between overrun and propulsion"              "AccPed_rThresPrp_C"           ""      1   1  0  0  
+ADDR =     A0C8C                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = %                     0.01220703125              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9039]  
+DESC.001 =  Maximum drift limt for correction factors in low idle
+DESC.002 = AFS_facIdlAdjValMax_C  
+VIEW =     2    "Maximum drift limt for correction factors in low idle"              "AFS_facIdlAdjValMax_C"           ""      1   1  0  0  
+ADDR =     9C5E4                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.000122070313              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9040]  
+DESC.001 =  Minimum drift limt for correction factor in load range.
+DESC.002 = AFS_facLdAdjValMin_C  
+VIEW =     2    "Minimum drift limt for correction factor in load range."              "AFS_facLdAdjValMin_C"           ""      1   1  0  0  
+ADDR =     9C5EC                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     0.000122070313              0    5              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9041]  
+DESC.001 =  Index for selection of environmental temperature
+DESC.002 = AFS_numEnvTemp_C  
+VIEW =     2    "Index for selection of environmental temperature"              "AFS_numEnvTemp_C"           ""      1   1  0  0  
+ADDR =     9C60D                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT =                      1              0    3              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9042]  
+DESC.001 =  Bit mask to select Air-Control monitoring shut-off for learning points relese
+DESC.002 = AFS_stAirCtlBitsMsk_C  
+VIEW =     2    "Bit mask to select Air-Control monitoring shut-off for learning points relese"              "AFS_stAirCtlBitsMsk_C"           ""      1   1  0  0  
+ADDR =     9C614                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9043]  
+DESC.001 =  Software switch to release the drift compensation (1: compensation is released, 0: no compensation)
+DESC.002 = AFS_swtCurrAdjRls_C  
+VIEW =     2    "Software switch to release the drift compensation (1: compensation is released, 0: no compensation)"              "AFS_swtCurrAdjRls_C"           ""      1   1  0  0  
+ADDR =     9C618                                   8  SED     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = -                     1              0    2              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9044]  
+DESC.001 =  Lower induction air temperature threshold to fulfill the environmental condition [deg C]
+DESC.002 = AFS_tAirAdjRlsThresLo_C  
+VIEW =     2    "Lower induction air temperature threshold to fulfill the environmental condition [deg C]"              "AFS_tAirAdjRlsThresLo_C"           ""      1   1  0  0  
+ADDR =     9C61C                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = deg C                     0.1              273.14    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9045]  
+DESC.001 =  Lower environmental temperature threshold to fulfill the environmental condition [deg C]
+DESC.002 = AFS_tEnvAdjRlsThresLo_C  
+VIEW =     2    "Lower environmental temperature threshold to fulfill the environmental condition [deg C]"              "AFS_tEnvAdjRlsThresLo_C"           ""      1   1  0  0  
+ADDR =     9C620                                   16  SNM     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = deg C                     0.1              273.14    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9046]  
+DESC.001 =  Time constant for filtering the boost pressure gradient [ms]
+DESC.002 = AFS_tiBstPresPT1_C  
+VIEW =     2    "Time constant for filtering the boost pressure gradient [ms]"              "AFS_tiBstPresPT1_C"           ""      1   1  0  0  
+ADDR =     9C624                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = ms                     4294967.29599999357              0    1              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+;
+;
+[C9047]  
+DESC.001 =  Structure containing ramp slopes for response in case of errors air temperature sensor at HFM / Slope if the ramp has to be increased
+DESC.002 = Air_RmpSlpTAFS.Pos_C  
+VIEW =     2    "Structure containing ramp slopes for response in case of errors air temperature sensor at HFM / Slope if the ramp has to be increased"              "Air_RmpSlpTAFS.Pos_C"           ""      1   1  0  0  
+ADDR =     9C38C                                   32  FTL     
+;         # units                 #factor           #offset #Precision        #MinLimit   #Max Limit          #MinUser    #Max User
+SI_SLOT = K/s                     0.001525878906              0    4              -65535          65535              -65535          65535 
+;    # Body            #Col              #Row
+ULABELS = .              .              .  
+;           # Enumerations
+SI_ENUM = ""   
+IM_ENUM = ""   
+SI_COL = .             ""                 
+SI_ROW = .             ""                  
+IM_COL =  .            ""                  
+IM_ROW =  .            ""                  
+; ======================================================================================================  
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________
+; _______________________________________________________________________
+; |                                                                       |
+; |                        Copyright © 2019-2020                          |
+; |                              VSSTA INC.                               |
+; | _____________________________________________________________________ |
+; |                                                                       |
+; |                        http://www.vssta.com                           |
+; |                      contact: bobby@vssta.com                         |
+; |_______________________________________________________________________|
+;
+; _________________________________________________________________________

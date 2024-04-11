@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="shortcut icon" href="{% static 'img/favicon-32x32.png' %}" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/f2785cf4d9.js" crossorigin="anonymous"></script>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+  {% block header %}
+  <header>
+    {% block above_nav %}
+    {% endblock %}
+    <nav class="navbar">
+      <a class="nav-logo img-logo" href="{% url 'streams:home' %}">
+        <img src="{% static 'img/logos/logo-white.png' %}" alt="">
+      </a>
+      <input class="toggle" type="checkbox">
+      <div class="hamburger">
+        <div class="hamburger-background">
+          <div class="hamburger-line"></div>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="{% url 'streams:home' %}">Schedule</a></li>
+        <li><a href="{% url 'streams:top_chart' %}">Top Charts</a></li>
+
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'streams:admin' %}">Admin</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+  {% endblock header %}
+
+  <main>
+    <ul class="breadcrumbs">
+      {% block breadcrumbs %}
+      {% endblock %}
+    </ul>
+    {% block main %}
+    {% endblock %}
+    {% block prefooter %}
+    {% endblock %}
+  </main>
+
+  {% block footer %}
+  <footer>
+    <div class="footer">
+      <div class="footer-header">
+        <a href="{% url 'streams:home' %}">
+          <img class="logo" src="{% static 'img/logos/logo-primary.png' %}" alt="">
+        </a>
+      </div>
+      <div class="footer-body">
+        <p class="footer-description">Look Who' s Streaming is the internet’s premier destination for Live Streaming schedules, charts, analytics and statistics. Using our proprietary software "StreamScraper". We are able to track live stream data across multiple platforms such as Youtube , Instagram Live and Twitch. Find out stats like has the most Instagram live viewers or who is the most popular live streamer. We also provide a live stream schedule that is updated daily. Find out the most popular livestreaming concerts, events and gaming all in one place.</p>
+        <div class="footer-contact">
+          <span>For general inquires contact<br><a href="mailto:info@lookwhosstreaming.com">Info@lookwhosstreaming.com</a></span>
+          <span>Have a live streaming event you don't see on our website email<br><a href="mailto:schedule@lookwhosstreaming.com">schedule@lookwhosstreaming.com</a></span>
+          <span>For brand collaborations<br><a href="mailto:marketing@lookwhosstreaming.com">marketing@lookwhosstreaming.com</a></span>
+          <span>Press inquiries<br><a href="mailto:press@lookwhosstreaming.com">press@lookwhosstreaming.com</a></span>
+        </div>
+        <div class="footer-social">
+          <a target="_blank" href="https://www.instagram.com/lookwhosstreaming/"><i class="fab fa-instagram"></i></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UC4AjN6E-VMeyq-cHJRyxdKQ"><i class="fab fa-youtube"></i></a>
+          <a target="_blank" href="https://twitter.com/LookWhoStreams"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © Look Who's Streaming {% now "Y" %}
+    </div>
+  </footer>
+  {% endblock %}
+  {% block js %}
+  <script> </script>
+  {% endblock %}
+</body>
+
+</html>

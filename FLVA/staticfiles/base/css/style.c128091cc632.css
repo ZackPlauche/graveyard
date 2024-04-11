@@ -1,0 +1,882 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Defaults
+_____________________________________________________________________________ */
+
+p,
+a,
+div,
+input {
+  font-family: 'Lato';
+}
+
+::selection {
+  background-color: red;
+  color: white;
+}
+
+/* Forms */
+
+form input,
+form textarea {
+  font-family: Lato;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  transition: all .2s ease;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: darkgrey;
+  transition: all .2s ease;
+}
+
+form input:hover::-webkit-input-placeholder,
+form textarea:hover::-webkit-input-placeholder {
+  color: grey;
+}
+
+form input:focus {
+  border: 1px solid black;
+}
+
+
+
+
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Common Elements
+_____________________________________________________________________________ */
+
+/* Layout */
+
+.flex-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flex-grid-area {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Titles */
+
+.section-title {
+  font-family: Lato;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 80px;
+}
+
+/* Buttons */
+
+.baby-button {}
+
+.button {}
+
+.big-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 50px;
+  color: white;
+  background-color: red;
+  font-family: 'Work Sans';
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: -.3px;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 100vw;
+  white-space: nowrap;
+  transition: all .2s ease;
+
+}
+
+.big-button:hover {
+  background-color: #b90000;
+
+}
+
+.big-ass-button {}
+
+.buttons-area {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: 'Work Sans';
+  letter-spacing: -4px;
+  font-weight: 200;
+}
+
+/* Hero Image */
+
+.hero {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: url("../img/librarian-organizing-books.d495cbc792d6.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0 -85px;
+  border-radius: 20px;
+  height: 50vh;
+  margin: 20px;
+  position: relative;
+}
+
+@media screen and (max-width: 1270px) {
+
+  .hero {
+    background-position: top;
+  }
+}
+
+.hero::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  background-color: #00000060;
+  transition: background-color .5s ease;
+}
+
+.hero:hover::before {
+  background-color: #00000090;
+}
+
+.hero .title {
+  color: white;
+  font-family: 'Work Sans';
+  font-weight: 600;
+  font-size: 80px;
+  margin: 0 0 20px 20px;
+  letter-spacing: -2px;
+  z-index: 1;
+}
+
+.hero .title span {
+  color: red;
+}
+
+@media screen and (max-width: 520px) {
+
+  .hero {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .hero .title {
+    font-size: 75px;
+    margin: 0;
+  }
+}
+
+:not(.index) > .hero {
+  height: 14vh;
+  justify-content: center;
+  width: auto;
+  padding: 0 20px;
+}
+
+:not(.index) > .hero .title {
+  margin: 0;
+}
+
+/* Main CTA (optional) */
+
+.main-cta {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  margin: 75px 0;
+}
+
+.main-cta > * {
+  width: 95%;
+}
+
+.main-cta .title {
+  font-family: 'Work Sans';
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.main-cta .subtitle {
+  text-align: center;
+  max-width: 500px;
+  color: #1f1f1f;
+}
+
+.main-cta .big-button {
+  margin: 20px 10px;
+  padding: 15px;
+}
+
+
+.main-cta .buttons-area .big-button:nth-child(2) {
+  background-color: white;
+  color: red;
+
+}
+
+.main-cta .buttons-area .big-button:nth-child(2):hover {
+  box-shadow: 0 0 5px red;
+}
+
+@media screen and (max-width: 651px) {
+  .main-cta .buttons-area .big-button:nth-child(2) {
+    margin-top: 5px;
+  }
+}
+
+/* Navigation
+_____________________________________________________________________________ */
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 9vh;
+  border-bottom: 1px solid lightgrey;
+}
+
+.navbar a {
+  text-decoration: none;
+  transition: all .2s ease;
+  color: red;
+}
+
+.navbar .logo {
+  margin-left: 50px;
+  font-size: 60px;
+}
+
+.navbar .logo span {
+  color: black;
+  font-size: 35px;
+  margin-left: 3px;
+  letter-spacing: -2px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.navbar .nav-links a {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 9vh;
+  border-right: 1px solid red;
+}
+
+.navbar .nav-links a:hover {
+  background-color: red;
+  color: white;
+}
+
+@media screen and (max-width: 663px) {
+  .navbar {
+    flex-flow: row wrap;
+    justify-content: center;
+    height: auto;
+  }
+
+  .navbar .logo {
+    margin-left: 0;
+  }
+
+  .navbar .nav-links {
+    justify-content: center;
+    width: 100vw;
+    margin-right: 0px;
+  }
+
+  .navbar .nav-links li:last-of-type a {
+    border-right: none;
+  }
+
+  .navbar .nav-links li:first-of-type,
+  .navbar .nav-links li:first-of-type a,
+  .navbar .nav-links li:last-of-type,
+  .navbar .nav-links li:last-of-type a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* 1. Index
+_____________________________________________________________________________ */
+
+.index {
+  display: block;
+}
+
+/* Content */
+
+.index .content {
+  display: flex;
+  position: relative;
+}
+
+/* News */
+
+.posts {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+  width: 100%;
+  min-width: 60vw;
+}
+
+.posts > .subtitle,
+.index .events > .subtitle {
+  margin: 0px 0 20px;
+  color: grey;
+}
+
+.post {
+  width: 100%;
+  max-width: 657px;
+  min-width: 374.4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px grey;
+}
+
+.post .title {
+  font-family: 'Work Sans';
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 40px;
+}
+
+.post .pub-date {
+  font-size: .8em;
+  color: grey;
+  margin: 5px 0 10px;
+}
+
+.post img {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.post .body {
+  color: #333333;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 16px;
+  margin-bottom: 36px;
+}
+
+
+
+/* Events */
+
+.index .events {
+ max-width: 40vw;
+ width: 100%;
+ height: 100%;
+ padding: 0 10px;
+ background: whitesmoke;
+ margin-top: 10px;
+ position: sticky;
+ box-shadow: 0 0 1px #1f1f1f;
+ top: 20px;
+}
+
+@media screen and (max-width: 843px) {
+  .index .events {
+    display: none;
+
+  }
+}
+
+.index .event {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  background-color: white;
+  height: 100px;
+  padding: 10px;
+  box-shadow: 0 0 1px grey;
+  margin-bottom: 10px;
+  transition: all .2s ease;
+}
+
+.index .event:hover {
+  box-shadow: 0 0 4px red;
+}
+
+.index .event img {
+  display: block;
+  width: 100px;
+  border: 1px solid red;
+}
+
+.index .event:hover img {
+  border: 1px solid red;
+}
+
+.index .event .text {
+  margin-left: 10px;
+  height: 100%;
+}
+
+.index .event .title {
+  color: black;
+  font-family: 'Work Sans';
+  font-size: 20px;
+  transition: .2s ease;
+}
+
+.index .event:hover .title {
+  color: red;
+}
+
+.index .event .date {
+  font-size: .8em;
+  color: grey;
+}
+
+.index .event .cta {
+  font-family: 'Work Sans';
+  color: white;
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  transition: all .2s ease;
+}
+
+.index .event:hover .cta {
+  color: red;
+}
+
+
+
+/* 2. About
+_____________________________________________________________________________ */
+
+.about .content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.about .section {
+  width: 95%;
+  max-width: 911.51px;
+  margin-bottom: 10px;
+}
+
+.about .section .title {
+  margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.about .section img {
+  width: 100%;
+ max-width: 495px;
+ margin-bottom: 10px;
+
+}
+
+.about .section .body {
+  max-width: 866px;
+}
+
+@media screen and (max-width: 650px) {
+  .about .section .title {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+  .about .section:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .about .section .title {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+/* 3. Contact
+_____________________________________________________________________________ */
+
+.contact .content {
+  width: 100%;
+  margin: auto;
+}
+
+.contact .form-area {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 0;
+  background-color: whitesmoke;
+}
+
+.contact .form-area .title {
+  margin-bottom: 5px;
+}
+
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact form #id_email {
+  grid-row: 2;
+  grid-column: 1 / 3;
+}
+
+.contact form #id_subject {
+  grid-row: 3;
+  grid-column: 1 / 3;
+}
+
+.contact form #id_message {
+  grid-row: 4;
+  grid-column: 1 / 3;
+}
+
+.contact form .buttons-area {
+  border: none;
+  grid-column: 1 / 3;
+  grid-row: 5;
+}
+
+/* 4. FAQ
+_____________________________________________________________________________ */
+
+.faq .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.questions {
+  width: 95%;
+  margin: auto;
+}
+
+.questions .block {
+  border-left: 1px dashed black;
+  margin-bottom: 20px;
+}
+
+.questions .block > * {
+  padding-left: 10px;
+  font-size: 50px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  .questions .block > * {
+    font-size: 30px;
+  }
+}
+
+.question {
+  background-color: #ff000020;
+  border-left: 3px solid red;
+}
+
+.question::before {
+  content: 'Q:';
+  color: red;
+}
+
+.answer {
+  background-color: #00bfff20;
+  border-left: 3px solid #00bfff;
+}
+
+.answer::before {
+  content: 'A:';
+  color: deepskyblue;
+  margin-right: 10px;
+}
+
+/* 5. Event Detail
+_____________________________________________________________________________ */
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  margin: 10px 0 20px;
+  list-style: none;
+  color: red;
+
+}
+
+.breadcrumbs a {
+  font-size: 20px;
+  color: red;
+  text-decoration-color: white;
+  transition: all .1s ease;
+}
+
+.breadcrumbs a::before {
+  content: '< '
+}
+
+.breadcrumbs a:hover {
+  color: #b90000;
+  text-decoration-color: #b90000;
+}
+
+.event-detail {
+  display: flex;
+  justify-content: center;
+}
+
+.event-detail .block {
+  width: 95%;
+  max-width: 800px;
+  box-shadow: 0 0 1px #1f1f1f;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin-bottom: 40px
+}
+
+.event-detail img {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.event-detail .content {
+  padding: 5px 10px 20px;
+}
+
+.event-detail .date {
+  margin-bottom: 10px;
+  color: grey;
+}
+
+.event-detail .description {
+  font-size: 20px;
+}
+
+/* 6. Thank you
+_____________________________________________________________________________ */
+
+.thank-you {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+/* 7. Signup
+_____________________________________________________________________________ */
+
+.signup {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.signup > * {
+  width: 95%;
+}
+
+.signup .section-title {
+  margin: 30px 0 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 414px) {
+  .signup .section-title {
+    font-size: 70px;
+  }
+}
+
+.signup .subtitle {
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 40px;
+  color: #1f1f1f;
+}
+
+.signup .form-area {
+  max-width: 600px;
+  background-color: whitesmoke;
+  padding: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 1px #1f1f1f;
+  border-radius: 5px;
+}
+
+.signup form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 5px;
+}
+
+.signup form input {
+  width: 100%;
+}
+
+.signup form #id_email {
+  grid-row: 2;
+  grid-column: 1 / 3;
+}
+
+.signup form .buttons-area {
+  grid-row: 3;
+  grid-column: 1 / 3;
+}
+
+/* Footer
+_____________________________________________________________________________ */
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid red;
+  background-color: #2d2d2d;
+  padding: 40px 0px;
+}
+
+.footer .block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  min-width: 300px;
+}
+
+.footer .logo {
+  color: white;
+  font-size: 120px;
+}
+
+.footer .nav-links {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-content: space-between;
+  list-style: none;
+  height: 180px;
+  width: 300px;
+  padding: 30px;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+
+@media screen and (max-width: 1138px) {
+
+  .footer {
+    justify-content: space-around;
+  }
+
+  .footer .nav-links {
+    border: none;
+  }
+
+  .footer .block {
+    margin-bottom: 30px;
+  }
+}
+
+.footer .nav-links a {
+  display: block;
+  color: white;
+}
+
+.join-community {
+  width: 300px;
+}
+
+.join-community .title {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.join-community .subtitle {
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 1138px) {
+
+  .join-community {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    align-items: center;
+  }
+
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  color: red;
+  background-color: white;
+}

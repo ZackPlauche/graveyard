@@ -1,0 +1,35 @@
+/* Defaults */
+@use "settings" as *;
+
+
+::selection {
+  color: $selection-text;
+  background: $selection-background;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $body-font;
+}
+
+main {
+    min-height: calc(100vh - #{$navbar-height});
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+}
+
+
+
+a {
+  text-decoration: none;
+}

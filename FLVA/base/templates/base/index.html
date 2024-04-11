@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block below_nav %}
+  <!-- Optional Main Call to Action for new users
+
+  </div> -->
+{% endblock %}
+
+{% block main %}
+<div class="index">
+  <div class="hero">
+      <h1 class="title"><span>F</span>uture <span>L</span>ibrarians of <span>V</span>irgini<span>a</span></h1>
+  </div>
+  {% if events %}
+  <a class="events-mobile-link" href="{% url 'base:events' %}">See Events</a>
+  {% endif %}
+  <div class="content">
+    {% if posts %}
+    <div class="posts">
+      <p class="section-title">News</p>
+      <p class="subtitle">Stay up to date on the latest community updates.</p>
+      {% for post in posts %}
+      <div class="post">
+        <h2 class="title">{{ post.title }}</h2>
+        <p class="pub-date">{{ post.pub_date }}</p>
+        {% if post.image %}<img src="{{ post.image.url }}">{% endif %}
+        <p class="body">{{ post.body|linebreaksbr }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if events %}
+    <div class="events">
+      <p class="section-title">Events</p>
+      <p class="subtitle">See upcoming community events and get involved!</p>
+
+      {% for event in events %}
+      {% if event.has_passed %}
+      {% else %}
+      <a class="event" href="{% url 'base:event_detail' event.slug %}">
+        <img src="{{ event.image.url }}" alt="Image relevant to the event.">
+        <div class="text">
+          <p class="title">{{ event.title }}</p>
+          <p class="date">{{ event.date }}</p>
+          <p class="cta">View</p>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

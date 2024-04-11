@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Google Fonts API -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Special+Elite&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome CDN-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Robert Ladner | Adventure Photographer</title>
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-nav">
+                        <input class="mobile-menu-toggle" type="checkbox">
+                        <div class="mobile-menu-icon">
+                            <div class="mobile-menu-icon-bar"></div>
+                        </div>
+                        <ul class="navbar-menu">
+                        </ul>
+                        <a href="index.html" class="navbar-logo absolute center">Robert Ladner</a>
+                        <ul class="navbar-menu mobile-menu absolute right">
+                            <li><a href="" class="nav-link">Photo Gallery</a></li>
+                            <li class="dropdown">
+                                <a href="" class="nav-link">About</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="" class="nav-link">My Story</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="nav-link">Contact</a></li>
+                            <ul class="navbar-menu px-2 my-1">
+                                <li><a class="nav-link" target="_blank" href="https://www.instagram.com/_roblad/"><i class="fab fa-instagram icon"></i></a></li>
+                                <li><a class="nav-link" target="_blank" href=""><i class="fab fa-facebook icon"></i></a></li>
+                                <li><a class="nav-link" target="_blank" href=""><i class="fab fa-linkedin-in icon"></i></a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="home-hero flex flex-middle vh-fit bg-cover" style="background-image: url('img/ROB_4003.jpg')">
+                <div class="container text-white px-2">
+                    <h1 class="hero-title display my-1">Adventure Photographer</h1>
+                    <p class="subtitle h4  mb-1">Embrace the World.</p>
+                    <a href="" class="btn btn-primary btn-hero">View Portfolio</a>
+                </div>
+            </section>
+
+            <section id="about" class="py-5">
+                <div class="container image-with-text">
+                    <div class="section-image" style="background-image: url('img/ROB_4003.jpg');"></div>
+                    <div class="text-center px-1">
+                        <h2 class="h1">About.</h2>
+                        <p class="lead mb-2">
+                            Hi, I'm Robert Ladner, but my friends call me Robby.<br><br>
+                            I'm an avid traveller, adventurer, and photographer. 
+                            I've loved adventure photography my entire life,
+                            and my burning passion for nature, people, and the outdoors pushed me to develop
+                            my photography skills so I could share the soul refreshing outdoor experiences with anyone with a taste
+                            for adventurelust.<br><br>
+                            I'm also open for photography work, so if you're interested in working with me, please
+                            feel free to contact me at anytime. I'll get back to you as soon as I can.
+                        </p>
+                        <a href="" class="btn btn-lg btn-black">Contact Me</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="container">
+                    <h2 class="h1 text-center">Portfolio</h2>
+                    <p class="lead text-center mb-3">Be prepared to explore a new realm of awesomeness with photography.</p>
+                    <ul class="photo-flex">
+                        <li><img src="img/ROB_4164.jpg" alt=""></li>
+                        <li><img src="img/Crescentbw.jpg" alt=""></li>
+                        <li><img src="img/D4A53F42-5C66-40DA-9743-6A38FE039DDDJPG.jpg" alt=""></li>
+                        <li><img src="img/FC79FFEB-57F4-4FCC-87C5-8FDD1895CA64JPG.jpg" alt=""></li>
+                        <li><img src="img/IMG_9919.jpg" alt=""></li>
+                        <li><img src="img/Photo Jul 01 8 07 57 AM.jpg" alt=""></li>
+                        <li><img src="img/ROB_3897.jpg" alt=""></li>
+                        <li><img src="img/ROB_4066.jpg" alt=""></li>
+                        <li><img src="img/ROB_4114.jpg" alt=""></li>
+                        <li><img src="img/cncvt.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="py-5 overlay overlay-dark-5 bg-cover bg-center text-white" style="background-image: url('img/FC79FFEB-57F4-4FCC-87C5-8FDD1895CA64JPG.jpg')">
+                <div class="container">
+                    <h2 class="h1">Join me on my adventures.</h2>
+                    <p class="lead mb-2">Sign up for my newsletter to recieve the latest updates on New Arrivals and a change to join me on one of my travelling adventures.</p>
+                    <form class="mb-2" action="">
+                        <!-- {% csrf_token %} -->
+                        <input type="text" placeholder="Enter your email...">
+                    </form>
+                    <a href="" class="rounded-sm btn btn-primary btn-md">Sign up</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="copyright">&copy; Robert Ladner 2021<br><small>Website built with 💙 by <a class="text-none text-zackhub" target="_blank" href="https://www.zackplauche.com/">Zack Plauché</a></small></div>
+            
+        </footer>
+
+        <script> </script>
+    </body>
+
+</html>

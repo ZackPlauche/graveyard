@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Thanks! {% endblock %}
+
+{% block main %}
+<div class="thank-you">
+  <h1 class="title">Thanks! We'll be in touch soon.</h1>
+  <a class="big-button" href="{% url 'base:index' %}">Return Home</a>
+</div>
+{% endblock %}
+{% block prefooter %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Menu Item Title{% endblock title %}
+
+{% block breadcrumbs %}
+    <li><a href="{% url 'base:home' %}">Home</a></li>
+    <li><a href="{% url 'menu:menu' %}">Menu</a></li>
+    <li>{{ item.title }}</li>
+{% endblock breadcrumbs %}
+{% block main %}
+<div class="menu-item-detail">
+    <h1 class="title">{{ item.title }}</h1>
+    <p class="description">{{ item.description }}</p>
+    {% if item.image %}
+    <img src="{{ item.image.url }}" alt="">
+    {% endif %}
+</div>
+{% endblock main %}

@@ -1,0 +1,70 @@
+.glass,
+.glass-hover:hover {
+  background: #ffffff15;
+  position: relative;
+  overflow: hidden;
+  transition: .2s ease;
+
+  > * {z-index: 1;}
+}
+
+.wipe {
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    background: linear-gradient(90deg, transparent,#fff8, transparent);
+    transition: all .25s ease;
+  }
+
+  &:hover::after {
+    left: 100%;
+  }
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    transform: rotate(45deg);
+    background-color: white;
+    opacity: 1;
+    height: 100%;
+    width: 150%;
+    transition: all ease 1s;
+  }
+  
+  &:hover::after {
+    transition-delay: .2s;
+  }
+  
+  &:hover::before,
+  &:hover::after {
+    left: 100%;
+  }
+}
+
+.shiny {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #ffffff15;
+  }
+}

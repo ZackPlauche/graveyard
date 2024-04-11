@@ -1,0 +1,189 @@
+// Variables //
+
+// Fonts
+$bentham: "Bentham", serif;
+$montserrat: "Montserrat", sans-serif;
+$poppins: "Poppins", sans-serif;
+$redhatdisplay: "Red Hat Display", sans-serif;
+$roboto: "Roboto", sans-serif;
+$worksans: "Work Sans", sans-serif;
+
+
+// Brand Colors
+$amazonorange: #f8991d;
+$amazonnavy: #232f3e;
+$awsbucketblue: #329ad6;
+$awsbucketgrey: #4d6573;
+$awsbucketturqoise: #6bd6f2;
+$awsbucketdarkblue: #2a5c91;
+$catislandcoffeehousebrown: #8f653f;
+$catislandcoffeehouseblue: #346079;
+$facebook: #4267b2;
+$instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+$instagramyellow: #fbad50;
+$tripadvisor: #34e0a1;
+$tiffany: #81d8d0;
+$yelp: #d32222;
+$youtube: red;
+$twitch: #6441A4;
+$zackhubblue: #21abde;
+
+// LookWhosStreaming Color Pallete
+$lwsdarkblue: #040b28;
+$lwsdarkbrown: #3a111c;
+$lwsdarkteal: #28544f;
+$lwsdarkcoral: #771515;
+$lwsblue: #0e3354;
+$lwsbrown: #7a3540;
+$lwsteal: #34a3a3;
+$lwscoral: #f23827;
+$lwslightblue: #4f6a99;
+$lwslightbrown: #b58d94;
+$lwslightteal: #8fbcb5;
+$lwslightcoral: #e59185;
+
+
+
+
+// Custom Colors //
+$aquamenth: #7fffd4;
+$phantom: #191970;
+$lushlava: #ff4500;
+$grass: #2ABB67;
+$electricblue: #21ABDE;
+$electricbluedim: #1c91bb;
+$electricbluedark: #004a66;
+$mystic: #00d1e6;
+$deepblue: #0c181e;
+$midnightblue: #080f13;
+
+// Custom Color Themes //
+
+// Theme: Juicy
+
+// Fruit
+$blueberry: #21abde;
+$blueberryripe: #1c91bb;
+$blueberryjuice: #004a66;
+$grape: #8921de;
+$grapejuice: #3d0066;
+$leaf: #31de21;
+$leafshade: #086600;
+$lemon: #dedb21;
+$lemonjuice: #646600;
+$orange: #dea521;
+$orangejuice: #664e00;
+$raspberry: #de2121;
+$raspberryripe: #bb1c1c;
+$raspberryjuice: #660000;
+
+// Bright Fruit
+$brightblueberry: #00e7ff;
+$brightblueberryjuice: #00d1e6;
+$brightgrape: #a200ff;
+$brightgrapejuice: #a200ff;
+$brightleaf: #00ff40;
+$brightleafshade: #00e626;
+$brightlemon: #fffb00;
+$brightlemonjuice: #e2e600;
+$brightorange: #ffc400;
+$brightorangejuice: #e6bc00;
+$brightraspberry: #ff0000;
+$brightraspberryjuice: #e60000;
+
+// Dark Fruit
+$darkblueberry: #0c181e;
+$darkblueberryjuice: #080f13;
+$darkgrape: #180c1e;
+$darkgrapejuice: #0f0813;
+$darkleaf: #0c1e0c;
+$darkleafshade: #081309;
+$darklemon: #1e1e0c;
+$darklemonjuice: #131308;
+$darkorange: #1e180c;
+$darkorangejuice: #131108;
+$darkraspberry: #1e0c0c;
+$darkraspberryjuice: #130808;
+
+// Default Colors
+$white: white;
+$blue: $blueberry;
+$cyan: $brightblueberry;
+$green: #00a706;
+$orange: $orange; 
+$purple: $grape;
+$red: $raspberry;
+$yellow: $lemon;
+$black: black;
+$darkblue: $blueberryjuice;
+$darkcyan: $brightblueberryjuice;
+$darkgreen: $leafshade;
+$darkorange: $orangejuice;
+$darkpurple: $grapejuice;
+$darkred: $raspberryjuice;
+$darkyellow: $lemonjuice;
+$dimgreen: #008604;
+$lightblue: #4f6a99;
+$lightbrown: #b58d94;
+$lightteal: #8fbcb5;
+$lightorange: #e59185;
+
+
+$default-colors: (
+    "black": $black,
+    "blue": $blue,
+    "cyan": $cyan,
+    "green": $green,
+    "orange": $orange,
+    "purple": $purple,
+    "red": $red,
+    "yellow": $yellow,
+    "white": $white,
+    "darkblue": $darkblue,
+    "darkcyan": $darkcyan,
+    "darkgreen": $darkgreen,
+    "darkorange": $darkorange,
+    "darkpurple": $darkpurple,
+    "darkred": $darkred,
+    "darkyellow": $darkyellow,
+);
+
+
+
+
+// Flex Properties
+$flows: (
+    "": row,
+    "-wrap": wrap,
+    "-reverse-wrap": row-reverse wrap,
+    "-column": column,
+    "-column-reverse": column-reverse,
+);
+
+$justify-contents-row: (
+    "": center,
+    "-around": space-around,
+    "-between": space-between,
+    "-left": flex-start,
+    "-right": flex-end,
+);
+
+$justify-contents-column: (
+    "": center,
+    "-around": space-around,
+    "-between": space-between,
+    "-top": flex-start,
+    "-bottom": flex-end,
+);
+
+$align-items-row: (
+    "": center,
+    "-top": flex-start,
+    "-bottom": flex-end,
+);
+
+$align-items-column: (
+    "": center,
+    "-left": flex-start,
+    "-right": flex-end,
+);

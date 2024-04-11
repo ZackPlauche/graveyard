@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags %}
+
+{% block head %}
+   
+{% endblock %}
+
+{% block body_class %}test-theme{% endblock %}
+
+{% block content %}
+    <section class="hero home-hero 4">
+        <div class="container">
+            <h1>{{ page.hero_title|safe|default:'Sync up with <span class="text-accent">ZackHub</span>' }}</h1>
+            <p class="lead">{{ page.hero_subtitle|safe|default:'We build World-Class Websites and Train World-Class Developers.' }}</p>
+            <p class="lead desktop">Click a big button.</p>
+            <div class="btn-container">
+                <a 
+                class="btn btn-hero btn-primary" 
+                href="{{ page.hero_cta_url.url }}">{{ page.hero_cta|default:"Get Started" }}
+                </a>
+                <a 
+                class="btn btn-hero shine shadow-hover-lg-primary"
+                href="#why-work-with-us">
+                    <span class="desktop">Why Should I Work With You?</span>
+                    <span class="mobile">Learn More</span>
+                </a>
+            </div>
+        </div>
+        <img class="hero-footer-accent" src="{% static 'img/Vector 1.png' %}" alt="">
+        <img class="hero-footer-accent" src="{% static 'img/Vector 2.png' %}" alt="">
+    </section>
+    {% for block in page.body %}
+        {% include_block block with block_type=block.block_type %}
+    {% endfor %}
+{% endblock content %}

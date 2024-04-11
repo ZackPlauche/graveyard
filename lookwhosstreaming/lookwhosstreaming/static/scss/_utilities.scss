@@ -1,0 +1,212 @@
+/* Common Elements */
+@use "variables" as *;
+@use "settings" as *;
+@use "mixins" as *;
+
+.flex {
+    @include flex();
+
+    @each $name, $flow in $flows {
+        @if $flow == column or $flow == column-reverse {
+            @each $jc-name, $jc-alignment in $justify-contents-column {
+                @each $ac-name, $ac-alignment in $align-items-column {
+                    &#{$name}#{$jc-name}#{$ac-name} {
+                        @include flex($flow, $jc-alignment, $ac-alignment);
+                    }
+                }
+            }
+        } @else {
+            @each $jr-name, $jr-alignment in $justify-contents-row {
+                @each $ar-name, $ar-alignment in $align-items-row {
+                    &#{$name}#{$jr-name}#{$ar-name} {
+                        @include flex($flow, $jr-alignment, $ar-alignment);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.icon {
+    color: $icons;
+    font-size: 25px;
+    transition: all 0.2s ease;
+    padding: 2px;
+
+    &.title {
+        color: $icons-title;
+    }
+
+    &.instagram:hover {
+        color: $instagram;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &.facebook:hover {
+        color: $facebook;
+    }
+
+    &.tripadvisor:hover {
+        color: $tripadvisor;
+    }
+
+    &.yelp:hover {
+        color: $yelp;
+    }
+}
+
+.overlay {
+    @include overlay(#0000);
+
+    &-hover {
+        @include overlay(#0000, #0003);
+    }
+
+    &-light {
+        @include overlay(#fff3);
+
+        &-hover {
+            @include overlay(#fff3, #fff5);
+        }
+
+        &er {
+            @include overlay(#fff5);
+
+            &-hover {
+                @include overlay(#fff5, #fff7);
+            }
+        }
+
+        &est {
+            @include overlay(#fff7);
+
+            &-hover {
+                @include overlay(#fff7, #fff9);
+            }
+        }
+    }
+
+    &-superlight {
+        @include overlay(#fff9);
+
+        &-hover {
+            @include overlay(#fff9, #ffff);
+        }
+    }
+
+    &-dark {
+        @include overlay(#0003);
+
+        &-hover {
+            @include overlay(#0003, #0005);
+        }
+
+        &er {
+            @include overlay(#0005);
+
+            &-hover {
+                @include overlay(#0005, #0007);
+            }
+        }
+
+        &est {
+            @include overlay(#0007);
+
+            &-hover {
+                @include overlay(#0007, #0009);
+            }
+        }
+    }
+
+    &-superdark {
+        @include overlay(#0009);
+
+        &-hover {
+            @include overlay(#0009, #000f);
+        }
+    }
+}
+
+.rounded {
+    border-radius: 5px;
+
+    $radius: (
+        "xsm": 1px,
+        "sm": 2px,
+        "md": 10px,
+        "lg": 15px,
+        "xlg": 20px,
+        "max": 100vh,
+    );
+
+    @each $name, $radius in $radius {
+        &-#{$name} {
+            border-radius: $radius;
+        }
+    }
+}
+
+.pill {
+    border-radius: 100vh;
+}
+
+$text-colors: (
+    "white": #fff,
+    "black": #000,
+    "primary": $primary,
+    "secondary": $secondary,
+    "mystic": $mystic,
+
+);
+
+@each $name, $color in $text-colors {
+    .text-#{$name} {
+        color: #{$color};
+    }
+}
+
+$text-alignments: (
+    "center": center,
+    "left": left,
+    "right": right,
+);
+
+@each $name, $alignment in $text-alignments {
+    .text-#{$name} {
+        text-align: #{$alignment};
+    }
+}
+
+$bg-colors: (
+    "white": white,
+    "light": whitesmoke,
+    "dark": #1f1f1f,
+    "black": black,
+    "deep": $darkblueberry,
+    "midnight": $darkblueberryjuice,
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "danger": $danger,
+    "mystic": $mystic,
+
+);
+
+@each $name, $color in $bg-colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+
+    .hvr-#{$name} {
+        transition: all .2s ease;
+        &:hover {
+            background-color: $color;
+        }
+    }
+
+    .shadow-#{$name} {
+        box-shadow: 0 0 5px #{$color};
+    }
+}

@@ -1,0 +1,16 @@
+.home-hero {
+  background-position: 50px 0;
+  text-align: right;
+}
+
+.home-hero .hero-title {
+  font-size: 70px;
+}
+
+@media only screen and (max-width: 800px) {
+  .home-hero {text-align: center}
+  .home-hero .hero-title {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}

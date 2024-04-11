@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Dashboard | Look Who's Streaming{% endblock title %}
+
+{% block main %}
+<div class="admin">
+
+  <div class="admin-header">
+    <h1>Admin Dashboard</h1>
+    <div class="flex-wrap">
+      <a class="button-header" href="{% url 'streams:streamer_list' %}">Manage Streamers</a>
+      <a class="button-header" href="{% url 'streams:stream_list' %}">Manage Schedule</a>
+      <a class="button-header" href="{% url 'streams:apiaccount_list' %}">Manage API Accounts</a>
+    </div>
+  </div>
+
+  <div class="admin-dashboard">
+
+    <!-- Dashboard Header -->
+    <div class="admin-dashboard-header">
+      <h2 class="admin-dashboard-title">Streams</h2>
+      <form class="admin-dashboard-filter" method="GET">
+
+        <!-- Select Platform -->
+        <select name="platform-select" id="platform-select">
+          <option value="">All Platforms</option>
+          {% for platform in platforms %}
+          <option value="{{ platform }}" {% if platform.name == active_platform %}selected{% endif %}>{{ platform }}</option>
+          {% endfor %}
+        </select>
+
+        <!-- Select Field -->
+        <select name="field-select" id="field-select">
+          <option value="" selected>Sort by field...</option>
+          {% for field in stream_fields %}
+          <option value="{{ field.name }}" {% if field.name == active_field %}selected{% endif %}>{{ field.verbose_name }}</option>
+          {% endfor %}
+        </select>
+      </form>
+    </div>
+
+    <!-- Dashboard Table -->
+    <div class="admin-dashboard-table-wrapper">
+      <table id="stream-table" class="admin-dashboard-table">
+        <colgroup>
+          <col>
+          {% for field in stream_fields %}
+          <col>
+          {% endfor %}
+        </colgroup>
+        <thead>
+          <tr>
+            {% comment %} <th><input type="checkbox" name="" id="select-all"></th> {% endcomment %}
+            {% for field in stream_fields %}
+            <th>{{ field.verbose_name }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for stream in streams %}
+          <tr>
+            {% comment %} <td><input type="checkbox" name="" id=""></td> {% endcomment %}
+            <td class="broadcast_id">{{ stream.broadcast_id }}</td>
+            <td class="host">{{ stream.host }}</td>
+            <td class="platform">{{ stream.platform }}</td>
+            <td class="title">{{ stream.title|truncatechars:30 }}</td>
+            <td class="description">{{ stream.description }}</td>
+            <td class="url">{{ stream.url }}</td>
+            <td class="live">{{ stream.live }}</td>
+            <td class="start-time">{{ stream.start_time }}</td>
+            <td class="end-time">{{ stream.end_time }}</td>
+            <td class="update-time">{{ stream.update_time }}</td>
+            <td class="peak-viewers">{{ stream.peak_viewers }}</td>
+            <td class="average-viewers">{{ stream.average_viewers }}</td>
+            <td class="current-viewers">{{ stream.current_viewers }}</td>
+            <td class="cumulative-viewers">{{ stream.cumulative_viewers }}</td>
+            <td class="cobroadcasters">{{ stream.cobroadcasters }}</td>
+            <td class="score">{{ stream.score }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+{% endblock main %}
+
+{% block js %}
+<script src="{% static 'js/admin_schedule_filter.js' %}"></script>
+{% endblock %}

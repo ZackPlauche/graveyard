@@ -1,0 +1,7 @@
+{% load wagtailcore_tags %}
+
+<div class="service-card-list {{ value.css_classes }}">
+    {% for service_card in value.service_cards %}
+        {% include_block service_card with css_classes=value.card_css_classes %}
+    {% endfor %}
+</div>

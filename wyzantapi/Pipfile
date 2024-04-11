@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pydantic = "*"
+selenium = "*"
+bs4 = "*"
+pytest = "*"
+autopep8 = "*"
+python-dotenv = "*"
+pandas = "*"
+pages = {git = "https://github.com/ZackPlauche/pages.git"}
+elements = {git = "https://github.com/ZackPlauche/elements.git"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

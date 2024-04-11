@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block full_title %}{% block title %}Page{% endblock %} | Steam Scraper{% endblock %}</title>
+</head>
+<body class="bg-gray-800">
+    {% if messages %}
+    <ul class="text-white">
+        {% for message in messages %}
+        <li class="bg-gray-900 text-center p-2">
+            <span 
+                {% if message.tags == 'error' %}
+                    class="text-red-500"
+                {% elif message.tags == 'success' %}
+                    class="text-green-400"
+                {% endif %}
+            >{{ message.tags|upper }}:</span> {{ message }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="min-h-screen flex items-center">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

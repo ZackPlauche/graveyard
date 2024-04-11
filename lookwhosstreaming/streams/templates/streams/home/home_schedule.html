@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}Look Who's Streaming | Your Live Streaming Go-to{% endblock title %}
+
+{% block main %}
+<div class="home">
+  <div class="home-header">
+    <h1>The #1 Platform to See who's Streaming</h1>
+    <p>We want to make it easy for you to keep up with Live Streams on your favorite platforms!</p>
+  </div>
+
+  <!-- Top Filter -->
+  <nav class="stream-nav">
+    <div class="stream-nav-bar">
+      <!-- Platforms -->
+      <div class="platforms">
+        {% for platform in platforms %}
+        <a class="{{ platform.name|lower }}" data-target="{{ platform.name }}">{{ platform.logo|safe }}</a>
+        {% endfor %}
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Category -->
+      <div class="categories">
+        {% for category in categories %}
+        <a data-target="{{ category.name }}"><span>{{ category.name }}</span></a>
+        {% endfor %}
+      </div>
+    </div>
+  </nav>
+
+  <!-- Chart -->
+  <div class="chart">
+    <div class="schedule">
+
+      <!-- Date Filter -->
+      <nav class="date-filter">
+        <div class="carousel-wrapper">
+          <div class="carousel" id="date-carousel">
+            <div class="dates">
+              {% for date in dates %}
+              <a data-target="{{ date|date:'m-d-Y' }}"><span>{{ date|date:'D' }}<br>{{ date|date:'M d' }}</span></a>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="arrow right-arrow"><span><span></span></span></div>
+          <div class="arrow left-arrow"><span><span></span></span></div>
+        </div>
+      </nav>
+
+      <!-- Live List -->
+      {% if live_streams.exists %}
+      <div class="live-list-wrapper">
+        <div class="live-list">
+          <div class="descriptor"><span>LIVE<br>NOW</span></div>
+          <div class="live-list-carousel-wrapper">
+            <div class="live-list-carousel" id="live-list-carousel">
+              {% for stream in live_streams %}
+              <div class="stream live {{ stream.host.platform|lower }}">
+                <a class="stream-image" target="_blank" href="{% if stream.url %}{{ stream.url }}{% else %}{{ stream.host.url }}{% endif %}">
+                  <img class="" src="{{ stream.host.profile_pic_url }}" alt="{{ stream.host.card_display_name }} profile picture." title="{{ stream.host.card_display_name }}">
+                </a>
+                <span class="stream-host">{{ stream.host|truncatechars:10 }}</span>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="arrow right-arrow"><span></span></div>
+            <div class="arrow left-arrow disabled"><span></span></div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Stream Table -->
+      <div class="schedule-table-wrapper">
+        <table class="schedule-table">
+          <tbody>
+            {% for stream in streams %}
+            <tr>
+              <td>
+                <a class="stream {% if stream.live %}live{% endif %} {{ stream.host.platform|lower }}" target="_blank" href="{% if stream.url %}{{ stream.url }}{% else %}{{ stream.host.url }}{% endif %}">
+                  <!-- Image -->
+                  <div class="stream-image">
+                    <img src=" {{ stream.host.profile_pic_url }}" alt="">
+                  </div>
+                  <span class="stream-text">
+                    <!-- Host & Title -->
+                    <span class="stream-host">{{ stream.host.platform.logo | safe }} {{ stream.host.card_display_name }}</span>
+                    <span class="stream-title">{% if stream.title %}{{ stream.title|truncatechars:30 }}{% else %}{% endif %}</span>
+                  </span>
+                </a>
+              </td>
+              <!-- Start Time -->
+              <td>{{ stream.start_time|date:'g:i A'|lower }} {{ stream.start_time|date:'e' }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+
+  {% endblock %}
+
+
+
+
+  {% block js %}
+  <script src="{% static 'js/carousel.js' %}"></script>
+  <script src="{% static 'js/schedule_filter.js' %}"></script>
+  {% endblock %}

@@ -1,0 +1,53 @@
+@use "variables" as *;
+@use "settings" as *;
+@use "mixins" as *;
+
+
+.button {
+    display: inline-block;
+    transition: all .3s ease;
+    
+    &.basic {
+        padding: 15px;
+        color: $button-text;
+        background: $button-background;
+        border: 1px solid black;
+
+        &:hover {
+            color: $button-hover-text;
+            background: $button-hover-background;
+        }
+    }
+
+    &.clear {
+        padding: 25px;
+        color: white;
+        border: 1px solid white;
+        background-color: #fff1;
+
+        &:hover {
+            background-color: #fff3;
+        }
+    }
+
+    
+
+    &.ice {
+        @extend .clear;
+        box-shadow: inset 0 0 10px white;
+    }
+
+    
+
+    &.clean {
+        padding: 25px;
+        color: black;
+        background: white;
+        border: 1px solid black;
+        
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Menu{% endblock %}
+
+
+{% block breadcrumbs %}
+<li><a href="{% url 'base:home' %}">Home</a></li>
+<li>Menu</li>
+{% endblock breadcrumbs %}
+
+{% block main %}
+<div class="menu">
+
+  <!-- Menu Header -->
+  <img class="menu-icon" src="{% static 'base/img/logos/logo.jpg' %}" alt="">
+
+  <!-- Menu Title -->
+  <h1 class="menu-title">Menu</h1>
+
+
+  <!-- Menu Category -->
+  {% if categories %}
+  {% for category in categories %}
+  {% if category.menuitem_set %}
+  <div class="menu-category">
+    <h2 class="menu-category-title">{{ category.name }}</h2>
+
+    <!-- Menu Item List -->
+    <div class="menu-item-list">
+      {% for item in category.menuitem_set.all %}
+      {% if item.display %}
+
+      <!-- Menu Item Container -->
+      <div class="menu-item-container">
+
+        <!-- Menu Item -->
+        <div class="menu-item" {% comment %} href="{% url 'menu:menu-item-detail' item.slug %}" {% endcomment %}>
+
+          <!-- Menu Item Title -->
+          <h3 class="title">{{ item.title }}</h3>
+
+          <!-- Menu Item Description -->
+          {% if item.short_description %}
+          <p class="description">{{ item.short_description }}</p>
+          {% endif %}
+
+          <!-- Menu Item Price -->
+          <p class="price">${{ item.price }}</p>
+
+          <div class="buttons-area">
+            <p class="button">View</p>
+          </div>
+
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% else %}
+  <p class="alert" style="color: red">No categories added.</p>
+  {% endif %}
+</div>
+{% endblock main %}

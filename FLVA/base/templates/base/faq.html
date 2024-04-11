@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}FAQ {% endblock %}
+
+{% block main %}
+<div class="faq">
+  <div class="hero">
+    <h1 class="title">FAQ</h1>
+  </div>
+
+  <div class="content">
+    <div class="questions">
+    {% for faq in faqs %}
+      {% if faq.display %}
+      <div class="block">
+          <p class="question">{{ faq.question }}</p>
+          <p class="answer">{{ faq.answer }}</p>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

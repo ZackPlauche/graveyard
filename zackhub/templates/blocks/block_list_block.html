@@ -1,0 +1,7 @@
+{% load wagtailcore_tags %}
+
+<section class="block-list">
+    {% for block in value %}
+        {% include_block block %}
+    {% endfor %}
+</section>

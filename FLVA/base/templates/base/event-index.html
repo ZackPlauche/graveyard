@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Events{% endblock %}
+
+{% block main %}
+<div class="events-index">
+  <div class="hero">
+    <h1 class="title">Events</h1>
+  </div>
+  {% if events %}
+  <div class="events">
+    {% for event in events %}
+    <a href="{% url 'base:event_detail' event.slug %}" class="event">
+      <img src="{{ event.image.url }}" alt="Image of event {{ event.title }}">
+      <div class="text">
+        <h2 class="title">{{ event.title }}</h2>
+        <p class="date">{{ event.date }}</p>
+          <div class="big-button">
+            Learn more
+          </div>
+      </div>
+
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <h2>There are currently no events.</h2>
+  {% endif %}
+</div>
+{% endblock %}

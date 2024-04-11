@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Schedule | Look Who's Streaming
+{% endblock title %}
+
+{% block breadcrumbs %}
+<li><a href="{% url 'streams:streamer_list' %}" class="back">Back</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="admin">
+  <div class="add-streamer">
+    <div class="admin-header">
+      <h1>Add Streamer</h1>
+      <p>Add a streamer's account for the app to watch.<br><small>Fields with * are required.</small></p>
+    </div>
+    <div class="forms">
+
+      <!-- Streamer Form -->
+      <form method="POST" id="streamer-form" class="admin-form">
+        <h2>Add a Streamer</h2>
+        {% csrf_token %}
+        {% for field in form %}
+        <p class="field-group">
+          <label for="{{ field.name }}">{{ field.label }}{% if field.field.required %}*{% endif %}</label>
+          {{ field }}
+          {% if field.help_text %}
+          <small>{{ field.help_text }}</small>
+          {% endif %}
+          {% if field.errors %}
+          {{ field.errors }}
+          {% endif %}
+        </p>
+        {% endfor %}
+        <button type="submit" name="add_streamer">Update Streamer</button>
+      </form>
+
+
+    </div>
+  </div>
+</div>
+{% endblock main %}

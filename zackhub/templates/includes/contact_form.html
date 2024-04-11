@@ -1,0 +1,23 @@
+<form class="form" action="" method="POST">
+    {% csrf_token %}
+    <div class="field-row">
+        <div class="field">
+            {{ form.first_name.label_tag }}
+            {{ form.first_name}}
+        </div>
+        <div class="field">
+            {{ form.last_name.label_tag }}
+            {{ form.last_name }}
+        </div>
+    </div>
+    <div class="field">
+        {{ form.email.label_tag }}
+        {{ form.email }}
+    </div>
+    <div class="field">
+        {{ form.message.label_tag }}
+        {{ form.message }}
+    </div>
+    {{ form.captcha }}
+    <button type="submit" class="btn btn-sm w-100 btn-primary rounded-sm">Submit</button>
+</form>

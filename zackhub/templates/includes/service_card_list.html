@@ -1,0 +1,5 @@
+<div class="service-card-list">
+    {% for service in services %}
+        {% include 'includes/service_card.html' with css_classes=card_css_classes%}
+    {% endfor %}
+</div>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Join Our Community! {% endblock %}
+
+{% block main %}
+<div class="signup">
+  <h1 class="section-title">Join our community!</h1>
+  <p class="subtitle">
+    Go further than you ever thought you could with the help of our team by joining our community!<br><br>
+    Fill out the form below to sign up and become a part of a community that's here to help.
+  </p>
+  <div class="form-area">
+    <form method="post">
+      {% csrf_token %}
+      {{ form }}
+      <div class="buttons-area">
+        <button type="submit" class="big-button">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block prefooter %}
+{% endblock %}

@@ -1,0 +1,53 @@
+.block {
+  --size: 50vw;
+  --icon-size: 120px;
+  --title-size: 60px;
+  --title-padding-top: 0px;
+  width: var(--size);
+  height: var(--size);
+  color: white;
+  position: relative;
+  text-align: center;
+  background: center / cover;
+  
+  &-list {display: flex}
+  
+  &-icon {
+    position: absolute !important;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: var(--icon-size);
+    width: var(--icon-size);
+    transition: var(--transition);
+  }
+  
+  &-title {
+    position: absolute !important;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%); 
+    transition: var(--transition);
+    padding-top: var(--title-padding-top);
+    font-size: var(--title-size);
+  }
+  
+  
+  @media screen and (max-width: 1199px) {
+    --icon-size: 100px;
+    --title-size: 40px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    --title-size: 32px;
+    --title-padding-top: 20px;
+    --icon-size: 80px;
+  }
+  
+  @media screen and (max-width: $mobile) {
+    --size: 100vw;
+    --icon-size: 100px;
+    --title-size: 50px;
+    &-list {flex-wrap: wrap}
+  }
+}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="home">
+  <div class="hero overlay">
+    <h1 class="hero-title">Cat Island Coffeehouse</h1>
+    <p class="hero-subtitle">Luxury, Enlivening Coffee Experience.</p>
+    <a href="#about" class="button basic">Explore</a>
+  </div>
+  <div class="home-body">
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2>Prepare to be pampered.</h2>
+      <div class="showcase">
+        <img src="{% static 'base/img/food-blueberry-cake.jpg' %}" alt="Blueberry Pound Cake">
+        <img src="{% static 'base/img/drinks-tea-hibiscus-cooler.jpg' %}" alt="Cat Island Latte">
+        <img src="{% static 'base/img/drinks-coffee-hario-kettle.jpg' %}" alt="Chai Latte with Cinnamon">
+        <img src="{% static 'base/img/food-breakfast-bagel-sandwich.jpg' %}" alt="Chicken Salad with Chicken Tomato Soup">
+      </div>
+      <p class="body"><strong>Cat Island Coffeehouse</strong> is South Mississippi's favorite getaway and most contemporary coffeehouse.
+        <br><br>
+        It is our mission to <em>elevate, enliven and dramatically enrich the lives of every being with whom we interact.</em> We invite you to feel at home while enjoying <strong>exquisite coffees</strong>, <strong>organic teas</strong>, <strong>soulful food</strong>, and <strong>breathtaking views</strong> of the Pass Christian harbor and the Gulf.
+      </p>
+      <div class="buttons-area"><a href="{% url 'menu:menu' %}" class="button basic">Explore Menu</a></div>
+    </section>
+
+    <!-- Explore Section -->
+    {% if sections %}
+    <section class="explore" id="explore">
+      <h2 class="title">Explore</h2>
+      {% for section in sections %}
+      <div class="section-block" id="{{ section.slugify }}">
+        <img src="{{ section.image.url }}" alt="{{ section.title }} Image" class="section-img">
+        <div class="content">
+          <h3 class="title">{{ section.title }}</h3>
+          <p class="body">{{ section.body }}</p>
+          {% if section.button_link %}
+          <div class="buttons-area">
+            <a href="{{ section.button_link }}" class="button basic">{{ section.button_text }}</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <!-- Contact Section -->
+    {% include 'base/includes/contact-section.html' %}
+
+  </div>
+
+</div>
+{% endblock %}

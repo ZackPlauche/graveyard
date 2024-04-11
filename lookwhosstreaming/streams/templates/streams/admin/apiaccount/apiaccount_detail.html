@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block breadcrumbs %}
+<li><a href="{% url 'streams:apiaccount_list' %}" class="back">Back</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="admin">
+  <div class="api-account-detail">
+    <div class="admin-header">
+      <h1>API Account Admin</h1>
+    </div>
+
+    <div class="admin-detail-block">
+      <div class="admin-detail-block-header">
+        <h2>{{ apiaccount.username }}</h2>
+      </div>
+      <table>
+        <tr>
+          <th><strong>Platform: </strong></th>
+          <td>{{ apiaccount.platform }}</td>
+        </tr>
+        <tr>
+          <th><strong>Email: </strong></th>
+          <td>{{ apiaccount.email }}</td>
+        </tr>
+        <tr>
+          <th><strong>Password: </strong></th>
+          <td class="password">{{ apiaccount.password }}</td>
+        </tr>
+        <tr>
+          <th><strong>Client ID: </strong></th>
+          <td>{{ apiaccount.client_id }}</td>
+        </tr>
+        <tr>
+          <th><strong>Auth Token: </strong></th>
+          <td>{{ apiaccount.auth_token }}</td>
+        </tr>
+        <tr>
+          <th><strong>API Key: </strong></th>
+          <td>{{ apiaccount.api_key }}</td>
+        </tr>
+      </table>
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

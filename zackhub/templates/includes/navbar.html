@@ -1,0 +1,21 @@
+{% load static wagtailcore_tags %}
+
+<nav class="navbar flex">
+    <div class="container">
+        <div class="navbar-nav">
+            <input class="mobile-menu-toggle" type="checkbox">
+            <a class="navbar-logo" href="{% slugurl 'home' %}">
+                <img src="{% static 'img/zackhub-logo-white-text-blue-circle.png' %}" alt="ZackHub Logo">
+            </a>
+            <div class="mobile-menu-icon">
+                <div class="mobile-menu-icon-line"></div>
+            </div>
+            <div class="navbar-menu">
+                {% include 'includes/menu.html' with menu=main_menu %}
+                <a href="{% slugurl 'home' %}#about" class="nav-link">About</a>
+                <a href="{% slugurl 'home' %}#contact" class="nav-link">Contact</a>
+                <a href="{% slugurl 'home' %}#get-started" class="nav-link btn btn-primary rounded">Get started</a>
+            </div>
+        </div>
+    </div>
+</nav>

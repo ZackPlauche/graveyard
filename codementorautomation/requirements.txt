@@ -1,0 +1,12 @@
+alembic
+autopep8
+fastapi
+flask
+inquirer
+pages
+pandas
+python-dotenv
+requests
+selenium-objects
+sqlalchemy-utils
+uvicorn

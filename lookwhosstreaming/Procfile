@@ -1,0 +1,4 @@
+web: python manage.py migrate && gunicorn lookwhosstreaming.wsgi
+celery_all: celery -A lookwhosstreaming beat --scheduler django_celery_beat.schedulers:DatabaseScheduler & celery -A lookwhosstreaming worker --beat --scheduler django_celery_beat.schedulers:DatabaseScheduler
+celery_beat: celery -A lookwhosstreaming beat --scheduler django_celery_beat.schedulers:DatabaseScheduler
+celery_worker: celery -A lookwhosstreaming worker --beat --scheduler django_celery_beat.schedulers:DatabaseScheduler

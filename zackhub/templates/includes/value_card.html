@@ -1,0 +1,7 @@
+{% load wagtailimages_tags %}
+
+<div class="card value-card rise shadow-hover-lg-primary">
+    <div class="card-icon"><img data-src="{{ value.icon.file.url }}" width="200" style="" class="lazy" /> </div>
+    <h3 class="card-title h2">{{ value.title|safe }}</h3>
+    <p class="card-description small">{{ value.description|safe }}</p>
+</div>

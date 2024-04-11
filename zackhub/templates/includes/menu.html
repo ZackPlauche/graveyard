@@ -1,0 +1,5 @@
+{% load wagtailcore_tags %}
+
+{% for page in menu %}
+    <a href="{% pageurl page %}" class="nav-link">{{ page.seo_title|default:page.title }}</a>
+{% endfor %}

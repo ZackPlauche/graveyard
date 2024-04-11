@@ -1,0 +1,14 @@
+.image-with-text {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  min-height: calc(90vh - var(--navbar-height));
+}
+
+.image-with-text .section-image {
+  background-size: cover;
+}
+
+.image-with-text .section-text {
+  
+}

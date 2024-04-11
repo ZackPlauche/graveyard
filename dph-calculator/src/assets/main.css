@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #04aadd;
+  --blue-dark: #00303f;
+  --green: #20d420;
+  --orange: sandybrown;
+  --orange-dark: #80420d;
+  --primary: var(--blue);
+  --primary-dark: var(--blue-dark);
+  --text-color: #1b1b1b;
+  --base-font: 'Heebo', sans-serif;
+  --bg-primary: white;
+  --bg-secondary: whitesmoke;
+}
+
+
+@layer utilities {
+  .center {
+    @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+  }
+
+  .tap-highlight-none {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

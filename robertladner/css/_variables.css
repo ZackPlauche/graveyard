@@ -1,0 +1,44 @@
+:root {
+  /* Colors */
+  --zackhub: #21abde;
+
+  /* Theme Colors */
+  --primary: darkseagreen;
+  --primary-dark: mediumseagreen;
+  --secondary: rgb(77, 57, 20);
+  --secondary-100: #eefff5;
+  --secondary-200: #49e790;
+  --secondary-300: var(--secondary);
+  --secondary-400: seagreen;
+  --secondary-light: ;
+  --danger: red;
+  --danger-dark: darkred;
+  --dark: #1b1b1b;
+
+  /* Fonts */
+  --base-font: 'Raleway', Arial;
+  --display-font: 'Herr Von Muellerhoff', cursive;
+  --heading-font: 'Special Elite';
+
+  /* Font Sizes */
+  --base-font-size: 16px;
+  --display: 80px;
+  --h1: 60px;
+  --h2: 36px;
+  --h3: 32px;
+  --h4: 28px;
+  --h5: 24px;
+  --h6: 22px;
+  --lead: 20px;
+  --small: 14px;
+  --mini: 12px;
+
+  /* Font Weights */
+  --thin: 100;
+  --light: 300;
+  --regular: 400;
+  --bold: 600;
+
+  /* Globals */
+  --navbar-height: 80px;
+}

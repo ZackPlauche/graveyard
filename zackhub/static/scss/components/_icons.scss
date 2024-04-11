@@ -1,0 +1,20 @@
+.icon {
+  // :not() Needed to keep wagtail action icons in order.
+  //
+  // You can see these icons when you're logged into the admin and are viewing 
+  // non-admin pages.
+  &:not(.wagtail-action-icon) { 
+    align-items: center;
+    border-radius: 100vh;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    transition: var(--transition);
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

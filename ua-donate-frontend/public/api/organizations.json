@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Ukraine Now",
+    "description": "Ukraine Now assists in guiding Ukrainians in danger zones to safer and more secure areas.",
+    "howToDonate": "Go into the website.\n\nClick on the big red button.\n\nThen go and download the thing to make it work.",
+    "type": "Humanitarian Aid",
+    "websiteUrl": "https://www.ukrainenow.org/",
+    "trustworthy": true,
+    "trustworthyWhy": "Because they are."
+  },
+  {
+    "name": "KOLOUA",
+    "description": "KOLOUA helps get essential military equipment to the Ukrainian armed forces as quickly as possible.",
+    "howToDonate": "Go into the website.\n\nClick on the big red button.\n\nThen go and download the thing to make it work.",
+    "type": "Military Support",
+    "websiteUrl": "https://www.koloua.com/en/",
+    "trustworthy": true,
+    "trustworthyWhy": "My friend Dima knows these guys personally."
+  }
+]

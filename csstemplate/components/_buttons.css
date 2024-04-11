@@ -1,0 +1,79 @@
+.btn {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+
+/* Buttons Sizes */
+
+.btn-md {padding: 15px 30px}
+
+.btn-lg {
+  font-size: var(--lead);
+  padding: 20px 40x;
+}
+
+.btn-hero {
+  font-size: var(--h4);
+  padding: 20px 40px;
+}
+
+/* Button Colors */
+
+.btn-primary {
+  color: white;
+  background-color: var(--primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  color: white;
+  background-color: var(--secondary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--secondary-dark);
+}
+
+.btn-danger {
+  color: white;
+  background-color: var(--danger);
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  background-color: var(--danger-dark);
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
+}
+
+.btn-black:focus, 
+.btn-black:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+}
+
+.btn-white:focus,
+.btn-white:hover {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,6 @@
+*.pyc
+Pipfile
+Pipfile.lock
+.env
+*.sqlite3
+*.db

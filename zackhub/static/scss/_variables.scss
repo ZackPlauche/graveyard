@@ -1,0 +1,96 @@
+// Screen Sizes
+$mobile: 500px;
+$tablet: 700px;
+$mobile-breakpoint: 1200px;
+$max-width: 1536px;
+
+:root {
+  // Colors 
+  --black: #000;
+  --lightblue: #00bbff;
+  --blue: #21abde;
+  --darkblue: #1983AA;
+  --green: #21de21;
+  --lightgrey: lightgrey;
+  --grey: darkgrey;
+  --darkgrey: grey;
+  --purple: rgb(84, 0, 153);
+  --pink: magenta;
+  --red: red;
+  --yellow: #ecec00;
+  --teal: #00D1FF;
+  --darkteal: #007994;
+  --white: #fff;
+  
+  // Theme Colors
+  --primary: var(--blue);
+  --primary-hover: var(--darkblue);
+  --secondary: var(--blue);
+  --secondary-hover: var(--blue-hover);
+  --accent: var(--teal);
+  --accent-hover: var(--darkteal);
+  --inactive: var(--lightgrey);
+  --active: var(--primary);
+  --dark: #1b1b1b;
+  --light: whitesmoke;
+  --dim: var(--grey);
+  
+  // Global Colors
+  --bg-primary: var(--black);
+  --bg-secondary: var(--white);
+
+  // Text Colors 
+  --text-primary: var(--white);
+  --text-secondary: var(--black);
+  
+  // Fonts
+  --base-font: 'Open Sans', sans-serif;
+  --heading-font: var(--base-font);
+
+  // Font Sizes
+  --base-font-size: 20px;
+  --h1: 60px;
+  --h2: 40px;
+  --h3: 32px;
+  --h4: 28px;
+  --h5: 24px;
+  --h6: 22px;
+  --lead: 32px;
+  --small: 18px;
+  --mini: 16px;
+  
+  // Font Weight
+  --base-font-weight: 400;
+  --heading-weight: 400;
+  --thin: 300;
+
+  // Letter spacing
+  --base-letter-spacing: .1px;
+  
+  // Line Height
+  --base-line-height: calc(var(--font-size) * 1.5);
+  
+  // Globals
+  --transition: .2s ease;
+  --navbar-height: 90px;
+}
+
+$colors: (
+  'blue',
+  'black',
+  'grey',
+  'lightgrey',
+  'darkgrey',
+  'cyan',
+  'white',
+);
+
+$theme-colors: (
+  'primary',
+  'secondary',
+  'dark',
+  'light',
+  'accent',
+);
+
+$colors: join($colors, $theme-colors);

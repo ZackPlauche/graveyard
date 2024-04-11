@@ -1,0 +1,7 @@
+{% load wagtailcore_tags %}
+
+<img class="card model-card {{ css_classes }}">
+    <div class="model-card-icon">{% image value.icon height-80 %}</div>
+    <h3 class="model-card-title {{ title_size }}">{{ value.name }}</h3>
+    <span class="model-card-cta">{{ value.cta }}</span>
+</div>

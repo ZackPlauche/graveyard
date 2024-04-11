@@ -1,0 +1,8 @@
+*.pyc
+.pytest_cache
+test.py
+.env
+# Temp
+request_cards.json
+ignore/*
+Pipfile

@@ -1,0 +1,6 @@
+.divider {
+  align-self: stretch;
+  width: var(--divider-width, 1px);
+  background-color: var(--divider-color, var(--dim));
+  // Breakpoints for display: none will need to be set by the parent if they are to be used.
+}

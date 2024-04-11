@@ -1,0 +1,230 @@
+@use "settings" as *;
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $navbar-background;
+  height: $navbar-height;
+  width: 100%;
+  box-shadow: $navbar-shadow;
+  position: $navbar-position;
+  z-index: 999;
+
+  @media screen and (max-width: $tablet) {
+    justify-content: center;
+  }
+
+  .nav-logo {
+    margin-left: 50px;
+
+    img {
+      height: 60px;
+    }
+    
+
+    &.text-logo {
+      font-size: 40px;
+      font-family: $heading-font;
+      color: $navlogo-color;
+    }
+
+    @media screen and (max-width: $tablet) {
+      margin: 0;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+    height: 100%;
+
+    @media screen and (max-width: $tablet) {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      z-index: -1;
+      top: $navbar-height;
+      background-color: $mobile-menu-background;
+      z-index: 0;
+      box-shadow: $navbar-shadow;
+      transition: transform 0.3s ease;
+      padding-bottom: 200px;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    li > * {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 10px;
+      color: $navlink-color;
+      font-size: $navlink-size;
+      font-weight: $navlink-weight;
+      background-color: initial;
+      transition: color 0.2s ease;
+
+      @media screen and (max-width: $tablet) {
+        margin: 20px;
+        font-size: 30px;
+      }
+    }
+
+    a {
+      &:hover {
+        color: $navlink-hover;
+      }
+
+      @media screen and (max-width: $tablet) {
+        &:hover {
+          color: $mobile-navlink-hover;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: $navbar-height;
+    width: $navbar-height;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media screen and (max-width: $tablet) {
+      display: flex;
+    }
+
+    .hamburger-background {
+      height: 90%;
+      width: 90%;
+      background-color: none;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $hamburger-background-hover;
+      }
+
+      .hamburger-line {
+        height: $hamburger-line-height;
+        width: $hambuger-line-width;
+        position: relative;
+        background: $hamburger-color;
+        transition: all 0.3s ease;
+        border-radius: $hamburger-border-radius;
+
+        &::before,
+        &::after {
+          content: "";
+          height: $hamburger-line-height;
+          width: 100%;
+          position: absolute;
+          top: -$hamburger-line-space;
+          right: 0;
+          background: $hamburger-color;
+          transition: all 0.3s ease;
+          border-radius: $hamburger-border-radius;
+        }
+
+        &::after {
+          top: $hamburger-line-space;
+        }
+      }
+    }
+  }
+
+  .toggle {
+    display: none;
+    height: $navbar-height;
+    width: $navbar-height;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 6;
+    opacity: 0;
+    cursor: pointer;
+
+    @media screen and (max-width: $tablet) {
+      display: block;
+    }
+
+    &:checked {
+      & + .hamburger .hamburger-line {
+        transform: rotate(135deg);
+
+        &::before,
+        &::after {
+          top: 0;
+          transform: rotate(90deg);
+        }
+      }
+
+      & ~ .nav-links {
+        display: flex;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    &:hover + .hamburger .hamburger-background {
+      background-color: $hamburger-background-hover;
+    }
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  list-style: none;
+  margin-left: 50px;
+
+  * {
+    font-weight: 300;
+    font-size: 20px;
+    padding: 15px 0 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin: 0;
+    justify-content: center;
+  }
+
+  li + li:before {
+    padding: 8px;
+    content: "/\00a0";
+  }
+
+  a {
+    color: $links;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid white;
+
+    &:hover {
+      border-bottom: 1px solid $links;
+    }
+  }
+
+  p {
+    display: inline;
+  }
+}
+
+
+header {
+  @if $navbar-position == "fixed" {
+    height: $navbar-height;
+  }
+}

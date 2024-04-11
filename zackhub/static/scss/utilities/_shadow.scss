@@ -1,0 +1,22 @@
+$shadow-sizes: (
+  'none': none,
+  'sm': 0 2.5px 5px,
+  'md': 0 5px 10px,
+  'lg': 0 7.5px 15px,
+);
+
+@each $size, $shadow in $shadow-sizes {
+  .shadow-#{$size} {box-shadow: $shadow var(--lightgrey)}
+  .shadow-hover-#{$size}:hover {
+    @media screen and (min-width: $mobile-breakpoint) {
+      box-shadow: $shadow var(--lightgrey);
+    }  
+  }
+  
+    @each $color in $colors {
+      .shadow-#{$size}-#{$color} {box-shadow: $shadow var(--#{$color})}
+      .shadow-hover-#{$size}-#{$color}:hover {
+        box-shadow: $shadow var(--#{$color})
+    }
+    }
+  }

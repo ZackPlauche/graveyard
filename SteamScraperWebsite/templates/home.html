@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block full_title %}Steam Scraper | Get Your Steam and CSGO Data{% endblock %}
+
+{% block content %}
+<div class="w-[95%] container mx-auto text-center text-white py-5">
+    <h1 class="text-6xl sm:text-7xl font-bold">Steam Scraper</h1>
+    <p class="text-2xl mt-5">Insert your Steam Profile link in the field below to receive your data.</p>
+    <form class="mt-4 flex justify-center bg-gray-900 max-w-screen-md p-2 mx-auto" action="{% url 'results' %}">
+        <input 
+            class="p-2 rounded-l w-full text-gray-800" 
+            type="text" 
+            placeholder="Enter your Steam Profile URL here..."
+            name="steamURL"
+            required
+        >
+        <button 
+            class="inline-flex items-center justify-center px-5 py-2 text-white bg-gray-600 hover:bg-gray-500 rounded-r" 
+            type="submit">
+            Submit
+        </button>
+    </form>
+    <p class="text-md mt-4">NOTE: We do NOT store your data, simply provide it back to you. 😎</p>
+</div>
+{% endblock %}

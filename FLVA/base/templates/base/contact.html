@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact {% endblock %}
+
+{% block main %}
+<div class="contact">
+  <div class="hero">
+    <h1 class="title">Contact</h1>
+  </div>
+  <div class="content">
+    <div class="form-area">
+      <h2 class="title">Have A Question?</h2>
+      <p class="subtitle">We're here to help! Fill out the form below and we'll get back to you within 24 hours.</p>
+      <form  method="post">
+        {% csrf_token %}
+        {{ form }}
+        <div class="buttons-area">
+          <button class="big-button" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

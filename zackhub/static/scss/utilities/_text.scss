@@ -1,0 +1,32 @@
+// Text Colors 
+@each $color in $colors {
+  .text-#{$color},
+  .text-hover-#{$color}:hover {
+    color: var(--#{$color});
+    span {color: var(--#{$color})}
+  }
+}
+
+
+// Text Alignment
+@each $alignment in left, right, center, justify {
+  .text-#{$alignment} {text-align: $alignment}
+}
+
+
+$text-weights: (
+  'thin': 300,
+  'normal': 400, 
+  'bold': 600,
+  'bolder': 700,
+  );
+  
+  @each $weight, $value in $text-weights {
+    .text-#{$weight} {
+      font-weight: $value;
+    }
+  }
+  
+  // Text Misc
+  .text-middle {vertical-align: middle}
+  .text-hyphen {hyphens: auto}

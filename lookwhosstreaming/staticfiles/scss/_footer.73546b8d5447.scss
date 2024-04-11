@@ -1,0 +1,87 @@
+/* Footer */
+@use "settings" as *;
+@use "mixins" as *;
+
+.footer {
+  @include flex(column);
+  background-color: $footer-background;
+  padding: 20px;
+  border-top: 1px solid lightgrey;
+  background: white;
+
+  img {
+    height: 100px;
+  }
+
+  &-body {
+    width: 95%;
+    max-width: 800px;
+  }
+
+  &-description {
+    color: #525252;
+    margin-top: 20px;
+    text-align: justify;
+  }
+
+  &-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    font-weight: 500;
+
+    @media screen and (max-width: 750px) {
+      grid-template-columns: auto;
+      text-align: center;
+
+      a {
+        display: inline-block;
+        margin-top: 5px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      margin-bottom: 20px;
+    }  
+  }
+
+  &-social {
+    @include flex($justify-content: space-around);
+    margin: 20px 0;
+  
+    i {
+      font-size: 29px;
+      color: darkgrey;
+      margin: 0 20px;
+
+      &:hover {
+        color: $footer-links;
+      }
+    }
+  }
+
+  a {
+    color: $footer-links;
+    font-weight: 400;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $footer-links-hover;
+      text-decoration: underline;
+    }
+  }
+
+  i {
+    transition: color 0.2s ease;
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $copyright-height;
+  color: $copyright-text;
+  background: $copyright-background;
+}

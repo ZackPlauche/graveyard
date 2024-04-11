@@ -1,0 +1,11 @@
+# Endings & Secret Files
+*.pyc
+*.DS_Store
+*.sqlite3
+*.db
+.env
+Pipfile
+
+# Node stuff
+node_modules
+*.log

@@ -1,0 +1,483 @@
+[
+  {
+    "model": "portfolio.review",
+    "pk": 1,
+    "fields": {
+      "title": "Zack is awesome!",
+      "text": "Zach has been helping me with a final project for my Python class, where we are using Django. He is very knowledgeable on the subject, and will also meet you wherever you are at in the learning process. Overall, he is amiable, patient, and adaptable, so I would definitely recommend him if you need help!",
+      "client_first_name": "Caycee",
+      "client_last_name": "Arreguin",
+      "active": true,
+      "featured": true,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 2,
+    "fields": {
+      "title": "Very friendly and encouraged to try.",
+      "text": "Zack is very friendly and approachable. He didn't tell you how great he is or promise the moon. He wanted to find out what the problem was and what he can do to help.",
+      "client_first_name": "Alexander",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 3,
+    "fields": {
+      "title": "Django/Python",
+      "text": "Zack was phenomenal! He taught me a lot and broke things down in a way that I can understand, thanks Zach!",
+      "client_first_name": "Andrew",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 4,
+    "fields": {
+      "title": "Knowledgeable tutor",
+      "text": "Zack is a very knowledgeable tutor. He helped my son with Django and he’s patient enough to walk him through the whole lesson. I would highly recommend Zack and woul definitely schedule a lesson with him again soon.",
+      "client_first_name": "Myla",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 5,
+    "fields": {
+      "title": "Great and dedicated!",
+      "text": "Zack helped me with some Python questions and was very dedicated in mot only helping me solve them, but making sure I understand the process. I would use his help again if needed.",
+      "client_first_name": "Kimberly",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 6,
+    "fields": {
+      "title": "Knowledgeable and professional",
+      "text": "Zack helped me with a simulated robot plot. He taught me a lot and was very patient. He put in a lot of time helping me. He knows a lot about python. He is very very qualified in his area of expertise.",
+      "client_first_name": "Marcus",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 7,
+    "fields": {
+      "title": "This guy is the Django G.O.A.T",
+      "text": "He helped me complete a project that seemed impossible to tackle. ...... and it was early in the morning. Super cool and fun session. Great personality and down to earth. Thank you so much!!!",
+      "client_first_name": "Monica",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 8,
+    "fields": {
+      "title": "Thorough and Empathetic Tutor",
+      "text": "I came to Zack with hopes that he will give me some tips to run a successful coding business and he came equipped with a great game plan. He was thorough and answered all of my questions properly. He was empathetic with where I am on my journey, and I feel more confident with where I'm heading. I would definitely recommend Zack to anyone who wants a clear perspective of what a possible path to a successful career looks like as a coder.",
+      "client_first_name": "Oma",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 9,
+    "fields": {
+      "title": "Great patient tutor",
+      "text": "App building, css styling, shortcuts, extensive django experience as well as python. spent a lot of time with me and was efficient. also able to learn new concepts to teach while students",
+      "client_first_name": "Umer",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 10,
+    "fields": {
+      "title": "Great Lessons!",
+      "text": "Zack is extremely knowledgeable and make learning a very seamless experience. He makes sure you understand what you’re going over and can cater to any audience!",
+      "client_first_name": "Joseph",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 11,
+    "fields": {
+      "title": "Knowledgeable and to the point",
+      "text": "We were able to go right to work. Brief, clear explanations make good use of class time. I have an existing project that I was looking at, but we were able to exchange code examples improved my Django skills in the first hour.",
+      "client_first_name": "Bill",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 12,
+    "fields": {
+      "title": "Exceptional CSS Tutor",
+      "text": "Zack is an exceptional CSS designer. He taught me several transform and transition tricks, and especially demonstrated how to approach coding in HTML to quickly and efficiently simplify render a page. I highly recommend Zack for your design project. cs",
+      "client_first_name": "Cheryl",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 13,
+    "fields": {
+      "title": "school",
+      "text": "Zack is very knowledgeable and walked me through each step on how to build my site from the ground up. I highly recommend him!",
+      "client_first_name": "Jamia",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 14,
+    "fields": {
+      "title": "Very Knowledgeable in Shopify programming.",
+      "text": "Zack answered all of my questions and proved to be very knowledgeable in the areas of online marketing. He proved to be friendly and courteous and patient. I look forward to having follow up tutoring sessions with him.",
+      "client_first_name": "Jon",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 15,
+    "fields": {
+      "title": "Patience in debugging.",
+      "text": "I was having a lot of errors using Python in the Liclipse IDE and Zack was able to help trouble shoot and find a solution. He showed patience in the debugging process.",
+      "client_first_name": "Micah",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 16,
+    "fields": {
+      "title": "Great tutor, nice guy, very knoweldgeable.",
+      "text": "Zack really knew his stuff. He helped me with facebook pixel/shopify integration. Made it easy and fun. Thanks mate. Will use him again.",
+      "client_first_name": "Michael",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 17,
+    "fields": {
+      "title": "Informative, patient, friendly",
+      "text": "Zack helped inform me about the process of becoming a python freelancer, as well as point me to useful resources to refer to. He was also very patient & friendly during our session. I would recommend Zack.",
+      "client_first_name": "Nicholas",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "Wyzant"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 18,
+    "fields": {
+      "title": "",
+      "text": "Helped me push my changes to Heroku and reset my entire database there. Also helped me set the queryset on drop down menu inputs.",
+      "client_first_name": "Claire",
+      "client_last_name": "C",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 19,
+    "fields": {
+      "title": "",
+      "text": "Helped me refactor my entire project so that it follows standards and is understandable, implement search functionality on my website, and use data from an outside source.",
+      "client_first_name": "Claire",
+      "client_last_name": "C",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 20,
+    "fields": {
+      "title": "",
+      "text": "Taught me the Python standard naming conventions and how to add user-specific features on my website.",
+      "client_first_name": "Claire",
+      "client_last_name": "C",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 21,
+    "fields": {
+      "title": "",
+      "text": "Updated authentication for accessing GitHub with new security updates",
+      "client_first_name": "Claire",
+      "client_last_name": "C",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 22,
+    "fields": {
+      "title": "",
+      "text": "Zack is very responsive and takes the project to the next level making it easier to edit long term. This is the 3rd time I have used Zack k- he is clearly my go to.",
+      "client_first_name": "Greg",
+      "client_last_name": "Wood",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 23,
+    "fields": {
+      "title": "",
+      "text": "Zack was very knowledgeable and helped me resolve my issue. Highly recommend using Zach for your debugging needs.",
+      "client_first_name": "Jonathon",
+      "client_last_name": "Hammond",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 24,
+    "fields": {
+      "title": "",
+      "text": "Zack figured out how to use selenium on Heroku and we're one step ahead towards our goal!",
+      "client_first_name": "Adrien",
+      "client_last_name": "Kwong",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 25,
+    "fields": {
+      "title": "",
+      "text": "Zack is amazing! He managed to turn my idea into reality with ease. ;)",
+      "client_first_name": "Adrien",
+      "client_last_name": "Kwong",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 26,
+    "fields": {
+      "title": "",
+      "text": "Zack is really understanding and nice, he is patient in helping me to solve the errors and explain to me the codes throughout! Highly recommend him",
+      "client_first_name": "Beaty",
+      "client_last_name": "",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 27,
+    "fields": {
+      "title": "",
+      "text": "Zack is great! He made my idea turn into reality and guided me along the way! Thanks!",
+      "client_first_name": "Adrien",
+      "client_last_name": "Kwong",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 28,
+    "fields": {
+      "title": "",
+      "text": "Walked through the process and sent me stack overflow links for reference",
+      "client_first_name": "Claire",
+      "client_last_name": "C",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 29,
+    "fields": {
+      "title": "",
+      "text": "Zack is great! He built the entire Django app for me and guided me through each step!",
+      "client_first_name": "Adrien",
+      "client_last_name": "Kwong",
+      "active": false,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 30,
+    "fields": {
+      "title": "",
+      "text": "explained things clearly and also asked me questions throughout to make sure I understand!",
+      "client_first_name": "Cliare",
+      "client_last_name": "C",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 31,
+    "fields": {
+      "title": "",
+      "text": "Zack was responsive and innovative with this approach. It was an absolute pleasure working with him.",
+      "client_first_name": "Greg",
+      "client_last_name": "Wood",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 32,
+    "fields": {
+      "title": "",
+      "text": "Zack is not only good at coding but also coaching. Highly recommended for beginners!",
+      "client_first_name": "Adrien",
+      "client_last_name": "Kwong",
+      "active": false,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 33,
+    "fields": {
+      "title": "",
+      "text": "Zack is wonderful. He understands my request quickly and comes up with solution almost instantly. Thanks!",
+      "client_first_name": "Adrien",
+      "client_last_name": "Kwong",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 34,
+    "fields": {
+      "title": "",
+      "text": "Zack is perfect. Solved my problem in 5 min.",
+      "client_first_name": "Adrien",
+      "client_last_name": "Kwong",
+      "active": false,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 35,
+    "fields": {
+      "title": "",
+      "text": "Zack helped me out a great deal and has great knowledge. Recommended!",
+      "client_first_name": "Anthony",
+      "client_last_name": "DiMeo",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 36,
+    "fields": {
+      "title": "",
+      "text": "Extremely helpful and very clear in his teaching.",
+      "client_first_name": "Ryan",
+      "client_last_name": "Kennedy",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  },
+  {
+    "model": "portfolio.review",
+    "pk": 37,
+    "fields": {
+      "title": "",
+      "text": "Super helpful! Was very thorough and continuously checked if I had any questions.",
+      "client_first_name": "Victoria",
+      "client_last_name": "Redfield",
+      "active": true,
+      "featured": false,
+      "source": "codementor.io"
+    }
+  }
+]

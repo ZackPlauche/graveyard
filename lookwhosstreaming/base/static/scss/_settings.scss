@@ -1,0 +1,83 @@
+// Settings //
+@forward "variables";
+@use "variables" as *;
+
+// Theme Colors
+$primary: $blueberry;
+$primarydim: $blueberryripe;
+$primarydark: $blueberryjuice;
+$secondary: $green;
+$secondarydim: $dimgreen;
+$secondarydark: $leafshade;
+$tertiary: $raspberry;
+$tertiarydim: $raspberryripe;
+$tertiarydark: $raspberryjuice;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$light: whitesmoke;
+$dark: #1f1f1f;
+
+// Viewports
+$mobile: 414px;
+$tablet: 700px;
+
+// Defaults
+$body-font: $montserrat;
+$body-background: white;
+$heading-font: $body-font;
+$selection-text: white;
+$selection-background: $primary;
+$links: $primary;
+$icons: black;
+$icons-title: black;
+
+// Navbar
+$navbar-position: fixed;
+$navbar-height: 60px;
+$navbar-mobile-height: 60px;
+$navbar-background: black;
+$navbar-shadow: none;
+$navlink-size: 18px;
+$navlink-weight: 400;
+$navlink-color: white;
+$navlink-hover: $primary;
+$navlogo-color: $navlink-color;
+$navlogo-font-size: 40px;
+
+// Mobile Menu
+$mobile-menu-background: black;
+$mobile-navlink-hover: $navlink-hover;
+
+// Hamburger Icon
+$hamburger-line-height: 3px;
+$hambuger-line-width: 30px;
+$hamburger-line-space: 10px;
+$hamburger-border-radius: 100vh;
+$hamburger-color: white;
+$hamburger-background-hover: #0e0b0b30;
+
+// Buttons (Common)
+$button-background: white;
+$button-hover-background: black;
+$button-text: black;
+$button-hover-text: white;
+$button-border: 1px solid black;
+
+// Hero
+$hero-overlay: #00000000;
+$hero-text-color: white;
+$hero-image: url('../img/kevin-gutierrez.jpg');
+
+// Footer
+$footer-padding: 40px 0;
+$footer-background: whitesmoke;
+$footer-navlink-color: $lwsteal;
+$footer-navlink-hover: darken($footer-navlink-color, 10);
+$footer-links: $lwsteal;
+$footer-links-hover: darken($footer-links, 10);
+
+// Copyright
+$copyright-height: 40px;
+$copyright-text: white;
+$copyright-background: black;

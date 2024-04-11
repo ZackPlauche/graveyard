@@ -1,0 +1,10 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<a href="{{ value.url.url }}" 
+ class="block overlay overlay-hover-primary-5 lazy" data-src="{{ value.background_image.file.url }}"
+ style=""
+>
+   
+	<img data-src="{{ value.icon.file.url }}" height="120" style="" class="block-icon lazy" />
+    <h3 class="block-title h1">{{ value.title }}</h3>
+</a>

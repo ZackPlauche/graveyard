@@ -1,0 +1,6 @@
+- [ ] Give items their own list.
+- [ ] Make PDF display menu.
+- [ ] Dashboard should show what's been sold (basically Sales), (sales over 30 days, a week, a year, graph form), list of purchases, export dashboard graph to pdf.
+- [ ] Product available for purchase that assigns credits, not Price per credit
+- [ ] Price in Credits on Items (being able to select which ones to use)
+- [ ] Add credits and cart to navbar

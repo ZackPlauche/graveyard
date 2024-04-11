@@ -1,0 +1,327 @@
+[
+  {
+    "model": "portfolio.project",
+    "pk": 1,
+    "fields": {
+      "title": "Zack Plauche Website v1",
+      "short_description": "The original website for Zack Plauché",
+      "long_description": "",
+      "site_url": "https://www.zackplauche.com",
+      "github_url": "",
+      "video_url": "",
+      "active": true,
+      "featured": false,
+      "status": "Live",
+      "thumbnail": 1,
+      "technologies": []
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 2,
+    "fields": {
+      "title": "Zack Plauche Website v2",
+      "short_description": "The Redesigned Website for Zack Plauché (also the  site you're on currently on! 😁).",
+      "long_description": "",
+      "site_url": "https://www.zackplauche.com",
+      "github_url": "",
+      "video_url": "",
+      "active": true,
+      "featured": false,
+      "status": "In Progress",
+      "thumbnail": 17,
+      "technologies": []
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 3,
+    "fields": {
+      "title": "ZackHub",
+      "short_description": "My Web Development Agency. The first website I've personally ever built.",
+      "long_description": "",
+      "site_url": "https://www.zackhub.com",
+      "github_url": "",
+      "video_url": "",
+      "active": true,
+      "featured": true,
+      "status": "Live",
+      "thumbnail": 3,
+      "technologies": []
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 4,
+    "fields": {
+      "title": "FLVA",
+      "short_description": "A project I built for a student of mine for her college course.",
+      "long_description": "",
+      "site_url": "https://flva.herokuapp.com",
+      "github_url": "",
+      "video_url": "",
+      "active": true,
+      "featured": true,
+      "status": "Completed",
+      "thumbnail": 4,
+      "technologies": []
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 5,
+    "fields": {
+      "title": "Dollar Per Hour Calculator",
+      "short_description": "A simple calculator app to convert time into money.",
+      "long_description": "",
+      "site_url": "https://www.dollarperhourcalculator.com/",
+      "github_url": "https://www.github.com/zackplauche/dollarperhourcalculator",
+      "video_url": "",
+      "active": true,
+      "featured": true,
+      "status": "Live",
+      "thumbnail": 5,
+      "technologies": []
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 6,
+    "fields": {
+      "title": "etikëtte",
+      "short_description": "A catering delivery service webapp that helps catering business owners connect to lovely people like yourself.",
+      "long_description": "",
+      "site_url": "https://www.etikette.com",
+      "github_url": "",
+      "video_url": "",
+      "active": true,
+      "featured": false,
+      "status": "Paused",
+      "thumbnail": 6,
+      "technologies": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 7,
+    "fields": {
+      "title": "Reflector",
+      "short_description": "An OOP python package that has tools for creating and storing user reflections / journaling answers into csv files organized by date.",
+      "long_description": "",
+      "site_url": "",
+      "github_url": "https://www.github.com/zackplauche/Reflector",
+      "video_url": "",
+      "active": true,
+      "featured": false,
+      "status": "Completed",
+      "thumbnail": 7,
+      "technologies": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 8,
+    "fields": {
+      "title": "Reflector Online",
+      "short_description": "A beautiful secure online reflecting application.",
+      "long_description": "",
+      "site_url": "",
+      "github_url": "",
+      "video_url": "",
+      "active": false,
+      "featured": false,
+      "status": "Concept",
+      "thumbnail": 7,
+      "technologies": []
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 9,
+    "fields": {
+      "title": "Windows Wallpaper Stealer",
+      "short_description": "A useful script for grabbing the Windows wallpapers hidden in a secret directory and secret file type on a Windows computer.",
+      "long_description": "It's currently only a prototype because it only works on computers that have Python installed.",
+      "site_url": "",
+      "github_url": "https://www.github.com/zackplauche/WindowsWallpaperStealer",
+      "video_url": "",
+      "active": true,
+      "featured": false,
+      "status": "Prototype",
+      "thumbnail": 9,
+      "technologies": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 10,
+    "fields": {
+      "title": "Mood Setter",
+      "short_description": "Script that allows a user to create their own mood image folders and randomly select from those folders to set as the background of their Windows computer.",
+      "long_description": "",
+      "site_url": "",
+      "github_url": "https://www.github.com/zackplauche/moodsetter/",
+      "video_url": "",
+      "active": true,
+      "featured": false,
+      "status": "Completed",
+      "thumbnail": 10,
+      "technologies": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 11,
+    "fields": {
+      "title": "CAX App",
+      "short_description": "Online CAX File generation platform that turns car scan data in CSV format to usable CAX files.",
+      "long_description": "",
+      "site_url": "https://cax-files.com/",
+      "github_url": "",
+      "video_url": "",
+      "active": true,
+      "featured": false,
+      "status": "Completed",
+      "thumbnail": 11,
+      "technologies": [
+        2,
+        3,
+        4,
+        6,
+        12
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 12,
+    "fields": {
+      "title": "Blue Ocean Strategy Generator",
+      "short_description": "A python script that allows a user to generate blue ocean strategy charts from user input.",
+      "long_description": "",
+      "site_url": "",
+      "github_url": "https://www.github.com/zackplauche/blueocean",
+      "video_url": "",
+      "active": true,
+      "featured": false,
+      "status": "Completed",
+      "thumbnail": 12,
+      "technologies": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 13,
+    "fields": {
+      "title": "Coffeehouse Template",
+      "short_description": "A coffeehouse template I built for a client who decided not to use it, so I decided that other's can use it for free.",
+      "long_description": "",
+      "site_url": "",
+      "github_url": "https://www.github.com/zackplauche/coffeeshoptemplate/",
+      "video_url": "",
+      "active": false,
+      "featured": false,
+      "status": "Concept",
+      "thumbnail": 20,
+      "technologies": [
+        2,
+        3,
+        6
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 14,
+    "fields": {
+      "title": "Drumthesia",
+      "short_description": "A Python project that allows you to trigger Python commands to a Midi Controller",
+      "long_description": "",
+      "site_url": "",
+      "github_url": "https://www.github.com/kennylepping/drumthesia",
+      "video_url": "https://youtu.be/6McUQjOs5Ts",
+      "active": true,
+      "featured": false,
+      "status": "Completed",
+      "thumbnail": 14,
+      "technologies": [
+        2,
+        13
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 15,
+    "fields": {
+      "title": "Robert Ladner",
+      "short_description": "Portfolio Site for one of my best friends Robert Ladner.",
+      "long_description": "",
+      "site_url": "https://zackplauche.github.io/robertladner",
+      "github_url": "https://www.github.com/zackplauche/robertladner",
+      "video_url": "",
+      "active": true,
+      "featured": true,
+      "status": "In Progress",
+      "thumbnail": 16,
+      "technologies": [
+        6,
+        8,
+        11
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 16,
+    "fields": {
+      "title": "Look Whos Streaming",
+      "short_description": "An app that displays streamers from different platforms who are CURRENTLY streaming and compares them against each other.",
+      "long_description": "",
+      "site_url": "https://www.lookwhosstreaming.com/",
+      "github_url": "",
+      "video_url": "",
+      "active": false,
+      "featured": false,
+      "status": "Paused",
+      "thumbnail": 15,
+      "technologies": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 17,
+    "fields": {
+      "title": "Steam Scraper",
+      "short_description": "A website that gives you in depth and useful details on your Steam profile for FREE!",
+      "long_description": "",
+      "site_url": "https://steamscraperwebsite.herokuapp.com",
+      "github_url": "",
+      "video_url": "",
+      "active": true,
+      "featured": true,
+      "status": "Live",
+      "thumbnail": 19,
+      "technologies": []
+    }
+  }
+]

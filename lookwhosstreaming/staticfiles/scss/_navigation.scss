@@ -1,0 +1,51 @@
+// Navigation
+@use "settings" as *;
+
+.breadcrumbs {
+  display: flex;
+  list-style: none;
+  margin-left: 50px;
+
+  * {
+    font-weight: 300;
+    font-size: 20px;
+    margin: 15px 0 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin: 0;
+    justify-content: center;
+  }
+
+  li + li:before {
+    padding: 8px;
+    content: "/\00a0";
+  }
+
+  a {
+    color: $links;
+    transition: all 0.2s ease;
+    border: 1px solid white;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px $links;
+
+
+    &:hover {
+      border: 1px solid $links;
+      background-color: $links;
+      color: white;
+      box-shadow: unset;
+    }
+    
+
+    &.back::before {
+      content: '< ';
+    }
+  }
+
+  p {
+    display: inline;
+  }
+}

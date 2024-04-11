@@ -1,0 +1,50 @@
+Vpcs:
+- CidrBlock: 172.16.0.0/16
+  CidrBlockAssociationSet:
+  - AssociationId: vpc-cidr-assoc-a100000
+    CidrBlock: 172.16.0.0/16
+    CidrBlockState:
+      State: associated
+  DhcpOptionsId: dopt-0cato87nof8600
+  InstanceTenancy: default
+  IsDefault: true
+  OwnerId: '57123456269'
+  State: available
+  Tags:
+  - Key: SomeProduct
+    Value: HAP
+  VpcId: vpc-6ba67b893
+- CidrBlock: 10.13.74.128/25
+  CidrBlockAssociationSet:
+  - AssociationId: vpc-cidr-assoc-03abd123efg789ace7
+    CidrBlock: 10.13.74.128/25
+    CidrBlockState:
+      State: associated
+  DhcpOptionsId: dopt-0ca2330abc1234ef
+  InstanceTenancy: default
+  IsDefault: false
+  OwnerId: '578412345678'
+  State: available
+  Tags:
+  - Key: AnotherProduct
+    Value: LAP
+  - Key: Name
+    Value: DMZ
+  VpcId: vpc-0fb0776ace30ef3ace
+- CidrBlock: 10.13.74.0/25
+  CidrBlockAssociationSet:
+  - AssociationId: vpc-cidr-assoc-0022a7b06ace123
+    CidrBlock: 10.13.74.0/25
+    CidrBlockState:
+      State: associated
+  DhcpOptionsId: dopt-039b6face123ef45
+  InstanceTenancy: default
+  IsDefault: false
+  OwnerId: '57849123456'
+  State: available
+  Tags:
+  - Key: Name
+    Value: Internal
+  - Key: SecondProduct
+    Value: SAP
+  VpcId: vpc-042c766ace12345

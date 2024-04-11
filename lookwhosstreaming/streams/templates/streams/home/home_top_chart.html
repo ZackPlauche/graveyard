@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load handler %}
+
+{% block title %}Top Charts | Look Who's Streaming 👀{% endblock title %}
+
+{% block main %}
+<div class="top-chart">
+
+  <!-- Hero -->
+  <div class="top-chart-hero">
+    <div class="top-chart-hero-header">
+      <h1 class="top-chart-hero-title">LWS Top 100
+        <!-- {{ streams.count }}--> Streams<br>
+        {% if active_platform %} {{ active_platform }}{% endif %}
+        {% if active_category %} {{ active_category }}{% endif %}
+      </h1>
+    </div>
+    {% if streams.first %}
+    <div class="top-chart-hero-body">
+      <div class="top-chart-hero-nav"></div>
+      <div class="top-chart-hero-winner">
+        <div class="stream">
+
+          <!-- Image -->
+          <a target="_blank" href="{% if streams.first.url %}{{ streams.first.url }}{% else %}{{ streams.first.host.url }}{% endif %}" class="stream-image">
+            <img src="{{ streams.first.host.profile_pic_url }}" alt="">
+          </a>
+
+          <!-- Text -->
+          <div class="stream-text">
+            <div class="stream-rank">#1</div>
+            <div class="stream-heading">
+              <h3 class="stream-host">{{ streams.first.host }}</h3>
+              <h2 class="stream-title" {% if streams.first.title %}title="{{ streams.first.title }}" {% else %}title="" {% endif %}>{% if streams.first.title %}{{ streams.first.title|truncatechars:20 }}{% else %}{% endif %}</h2>
+            </div>
+
+            <!-- Data -->
+            <div class="stream-data">
+              <div class="stream-data-box overlay-hover">
+                <span class="stream-data-heading">Peak Viewers</span>
+                <span class="stream-data-result">{% if streams.first.peak_viewers != 0 %}{{ streams.first.peak_viewers | format_large_number }}{% else %}n/a{% endif %}</span>
+              </div>
+              <div class="stream-data-box overlay-hover">
+                <span class="stream-data-heading">Average Viewers</span>
+                <span class="stream-data-result">{% if streams.first.average_viewers != 0 %}{{ streams.first.average_viewers | format_large_number }}{% else %}n/a{% endif %}</span>
+              </div>
+              <div class="stream-data-box overlay-hover">
+                <span class="stream-data-heading">Likes</span>
+                <span class="stream-data-result">{% if streams.first.likes != 0 %}{{ streams.first.likes | format_large_number }}{% else %}n/a{% endif %}</span>
+              </div>
+              <div class="stream-data-box overlay-hover">
+                <span class="stream-data-heading">Duration</span>
+                <span class="stream-data-result">{{ streams.first.duration }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Streams Error -->
+    {% else %}
+    <div class="top-chart-no-streams">
+      <div class="error">
+        <span class="error-message">There are currently no streams with these parameters.</span>
+        <span class="error-action">Please try another search combination.</span>
+      </div>
+      <nav class="stream-nav">
+        <div class="stream-nav-primary">
+          {% if platforms %}
+          <div class="platforms">
+            {% for platform in platforms %}
+            <a class="platform {{ platform.name|lower }} {% if active_platform == platform %}active{% endif %}" data-target="{{ platform }}">{{ platform.logo|safe }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <div class="divider"></div>
+          {% if categories %}
+          <div class="categories">
+            {% for category in categories %}
+            <a class="category {{ category.name|lower }} {% if active_category == category %}active{% endif %}" data-target="{{ category }}">{{ category }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <div class="stream-nav-secondary">
+          <div class="time-range">
+            <a class="time {% if time_query == None %}active{% endif %}" data-target="today">Today</a>
+            <a class="time" data-target="7">Last 7 Days</a>
+            <a class="time" data-target="30">Last 30 Days</a>
+            <a class="time" data-target="all-time">All Time</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- Body -->
+  {% if streams %}
+  <div class="top-chart-body">
+
+    <!-- Nav -->
+    <nav class="stream-nav">
+      <div class="stream-nav-primary">
+        {% if platforms %}
+        <div class="platforms">
+          {% for platform in platforms %}
+          <a class="platform {{ platform.name|lower }} {% if active_platform == platform %}active{% endif %}" data-target="{{ platform }}">{{ platform.logo|safe }}</a>
+          {% endfor %}
+        </div>
+        <div class="divider"></div>
+        {% endif %}
+        {% if categories %}
+        <div class="categories">
+          {% for category in categories %}
+          <a class="category {{ category.name|lower }} {% if active_category == category %}active{% endif %}" data-target="{{ category }}">{{ category }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <div class="stream-nav-secondary">
+        <div class="time-range">
+          <a class="time " data-target="today">Today</a>
+          <a class="time" data-target="7">Last 7 Days</a>
+          <a class="time" data-target="30">Last 30 Days</a>
+          <a class="time {% if time_query == None %}active{% endif %}" data-target="all-time">All Time</a>
+        </div>
+      </div>
+
+    </nav>
+
+    <!-- Streams -->
+    <div class="top-chart-list">
+      {% for stream in streams %}
+
+      <!-- Card -->
+      <a class="stream-card" target="_blank" href="{% if stream.url %}{{ stream.url }}{% else %}{{ stream.host.url }}{% endif %}">
+        <div class="stream {{ stream.host.platform|lower }} {% if stream.live %}live{% endif %}">
+
+          <!-- Rank-->
+          <div class="stream-rank">{{ forloop.counter }}</div>
+
+          <!-- Image -->
+          <div target="_blank" class="stream-image">
+            <img src="{{ stream.host.profile_pic_url }}" alt="">
+            <div class="stream-date">{{ stream.start_time|date:'n/j/Y' }}</div>
+          </div>
+
+          <!-- Card Text -->
+          <div class="stream-text">
+            <div class="stream-heading">
+
+
+              <!-- Title -->
+              <!-- Host -->
+              {% if stream.title %}
+              <h4 class="stream-host">{{ stream.host.platform.logo|safe }} {{ stream.host.card_display_name }}</h4>
+              <h3 class="stream-title" title="{{ stream.title }}">{{ stream.title|truncatechars:31 }}</h3>
+
+              {% else %}
+              <h3 class="stream-title" title="{{ stream.host.card_display_name }}">{{ stream.host.platform.logo|safe }} {{ stream.host.card_display_name }}</h3>
+
+              {% endif %}
+            </div>
+
+            <!-- Data -->
+            <div class="stream-data">
+
+              <!-- Peak Viewers -->
+              <div class="stream-data-box">
+                <span class="stream-data-heading">Peak Viewers</span>
+                <span class="stream-data-result">{% if stream.peak_viewers != 0 %}{{ stream.peak_viewers | format_large_number }}{% else %}n/a{% endif %}</span>
+              </div>
+
+              <!-- Average Viewers -->
+              <div class="stream-data-box">
+                <span class="stream-data-heading">Average Viewers</span>
+                <span class="stream-data-result">{% if stream.average_viewers != 0 %}{{ stream.average_viewers | format_large_number }}{% else %}n/a{% endif %}</span>
+              </div>
+
+              {% if stream.platform.name != "Twitch" %}
+              <!-- Likes -->
+              <div class="stream-data-box">
+                <span class="stream-data-heading">Likes</span>
+                <span class="stream-data-result">{% if stream.likes != 0 %}{{ stream.likes | format_large_number }}{% else %}n/a{% endif %}</span>
+              </div>
+              {% endif %}
+
+              <!-- Duration -->
+              <div class="stream-data-box">
+                <span class="stream-data-heading">Duration</span>
+                <span class="stream-data-result">{{ stream.duration | default_if_none:"n/a" }}</span>
+              </div>
+
+              <!-- Score -->
+              <div class="stream-data-box">
+                <span class="stream-data-heading">LWS Score</span>
+                <span class="stream-data-result">{% if stream.score != 0 %}{{ stream.score | floatformat:3 }}{% else %}n/a{% endif %}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/schedule_filter.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Service: {{ service.name }}</h1>
+
+<h2>Tasks</h2>
+{% if service.tasks.all %}
+<table>
+  <thead>
+    <tr>
+      <th>Completed</th>
+      <th>Name</th>
+      <th>Provisioner 1</th>
+      <th>Provisioner 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for task in service.tasks.all %}
+    <tr data-id="{{ task.id }}">
+      <td><input type="checkbox" {% if task.completed %}checked{% endif %}></td>
+      <td>{{ task.name }}</td>
+      <td>{{ task.provisioner_1.username }}</td>
+      <td>
+        <select name="provisioner_2">
+          <option value="">--------</option>
+          {% for user in users %}
+            <option value="{{ user.id }}" {% if task.provisioner_2.id == user.id %}selected{% endif %}>{{ user.username }}</option>
+          {% endfor %}
+        </select>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+  <p>No tasks to display.</p>
+{% endif %}
+<script>
+const tasks = document.querySelectorAll('tbody tr');
+
+// Autosave after a few seconds
+
+// Create or update a task on anything that changes for each task
+tasks.forEach(task => {
+  task.addEventListener('change', () => {
+    const id = task.dataset.id;
+    const completed = task.querySelector('input[type="checkbox"]').checked;
+    const provisioner_2 = task.querySelector('select[name="provisioner_2"]').value;
+
+    fetch(`/api/tasks/${id}/`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': '{{ csrf_token }}'
+      },
+      body: JSON.stringify({
+        completed: completed,
+        provisioner_2: provisioner_2
+      })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+  });
+});
+</script>
+{% endblock content %}

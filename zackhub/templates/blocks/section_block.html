@@ -1,0 +1,14 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+
+<section 
+ id="{{ value.section_id|slugify }}" 
+ class="{{ value.css_classes }}" 
+ style="background-image: url({{ value.background_image.file.url }}); {{ value.custom_css }}"
+>
+    {% if value.container %}<div class="container">{% endif %}
+        {% for block in value.content %}
+            {% include_block block %}
+        {% endfor %}
+    {% if value.container %}</div>{% endif %}
+</section>

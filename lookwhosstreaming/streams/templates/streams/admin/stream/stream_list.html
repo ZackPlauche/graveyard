@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block breadcrumbs %}
+<li><a href="{% url 'streams:admin' %}" class="back">Back</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="admin">
+  <div class="streams">
+    <div class="admin-header">
+      <h1>Stream Admin</h1>
+    </div>
+
+    <!-- Index Table -->
+    <div class="index-list">
+
+      <!-- Header -->
+      <div class="header">
+        <h2>Streams</h2>
+        <a href="{% url 'streams:stream_create' %}" class="button"><i class="fas fa-plus"></i></a>
+      </div>
+
+      <!-- Table Start -->
+      <div class="index-list-table">
+        <div class="thead">
+          <div class="row">
+            <span class="data">Host</span>
+            <span class="data">Start Date</span>
+            <span class="data"></span>
+          </div>
+        </div>
+        <div class="tbody">
+          {% if stream_list %}
+
+          {% for stream in stream_list %}
+          <div class="row">
+            <span class="data"><a href="{% url 'streams:stream_detail' stream.pk %}">{{ stream.host }}</a></span>
+            <span class="data">{{ stream.start_time|date }}</span>
+            <div class="buttons">
+              <a class="edit" href="{% url 'streams:stream_update' stream.id %}"><i class=" fas fa-pencil-alt"></i></a>
+              <a class="delete" href="{% url 'streams:stream_delete' stream.id %}"><i class="fas fa-times"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+          {% else %}
+          <div class="row">
+            No accounts.
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

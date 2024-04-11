@@ -1,0 +1,77 @@
+%card {
+  display: inline-block;
+  text-align: center;
+  transition: var(--transition);
+  width: 300px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card {
+  @extend %card;
+  border-radius: 20px;
+  padding: 20px;
+  border-radius: 20px;
+
+  &-icon {margin-bottom: 15px}
+  
+  &-list {
+    display: grid;
+    padding: 30px 0;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 50px;
+    grid-auto-rows: auto;
+    justify-content: center;
+  }
+  
+  span {transition: var(--transition)}
+}
+
+.service-card {
+  @extend %card;
+  height: 400px;
+  padding: 20px 10px;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-15px);
+  }
+
+
+  &-list {
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &-cta,
+  &-price,
+  &-collection-icon {
+    position: absolute;
+  }
+
+  &-cta {
+    bottom: 30px;
+    opacity: 0;
+    right: 0;
+    left: 0;
+    transition: opacity .2s ease;
+  }
+
+  &:hover &-cta {
+    opacity: 1;
+  }
+  
+  &-price {
+    bottom: 70px;
+    right: 0;
+    left: 0;
+  }
+
+  &-collection-icon {
+    top: 10px;
+    right: 10px;
+  }
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ event.title }} {% endblock %}
+
+{% block below_nav %}
+  <ul class="breadcrumbs">
+    <li><a href="{% url 'base:index' %}">Back</a></li>
+  </ul>
+{% endblock %}
+
+{% block main %}
+<div class="event-detail">
+    <div class="block">
+      {% if event.image %}<img src="{{ event.image.url }}">{% endif %}
+      <div class="content">
+        <h1 class="title">{{ event.title }}</h1>
+        <p class="date">{{ event.date }}</p>
+        <p class="description">{{ event.description|linebreaksbr }}</p>
+
+        {% if event.type == "In Person" %}
+        <div class="buttons-area">
+          <a class="big-button" target="_blank" href="{{ event.location }}">Get Directions</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block prefooter %}
+{% endblock %}

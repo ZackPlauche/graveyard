@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block breadcrumbs %}
+<li><a href="{% url 'streams:admin' %}" class="back">Back</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="admin">
+  <div class="api-accounts">
+    <div class="admin-header">
+      <h1>API Account Admin</h1>
+    </div>
+
+    <!-- Index Table -->
+    <div class="index-list">
+
+      <!-- Header -->
+      <div class="header">
+        <h2>Accounts</h2>
+        <a href="{% url 'streams:apiaccount_create' %}" class="button"><i class="fas fa-plus"></i></a>
+      </div>
+
+      <!-- Table Start -->
+      <div class="index-list-table">
+        <div class="thead">
+          <div class="row">
+            <span class="data">Account</span>
+            <span class="data">Platform</span>
+            <span class="data"></span>
+          </div>
+        </div>
+        <div class="tbody">
+          {% if apiaccount_list %}
+
+          {% for apiaccount in apiaccount_list %}
+          <div class="row">
+            <span class="data"><a href="{% url 'streams:apiaccount_detail' apiaccount.pk %}">{{ apiaccount.username }}</a></span>
+            <span class="data">{{ apiaccount.platform }}</span>
+            <div class="buttons">
+              <a class="edit" href="{% url 'streams:apiaccount_update' apiaccount.id %}"><i class=" fas fa-pencil-alt"></i></a>
+              <a class="delete" href="{% url 'streams:apiaccount_delete' apiaccount.id %}"><i class="fas fa-times"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+          {% else %}
+          <div class="row">
+            No accounts.
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

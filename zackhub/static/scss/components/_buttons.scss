@@ -1,0 +1,38 @@
+.btn {
+  --text-color: var(--white);
+  display: inline-block;
+  font-size: var(--base-font-size);
+  font-weight: bold;
+  transition: var(--transition);
+  padding: 10px;
+  white-space: nowrap;
+  text-align: center;
+  color: var(--text-color);
+  -webkit-tap-highlight-color: transparent;
+  
+  &:hover,
+  &:focus {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  &-lg {
+    padding: 15px 30px;
+    font-size: 1.3em;
+  }
+
+  &-hero {
+    font-size: 32px;
+    padding: 30px;
+    font-weight: bold;
+  }
+  
+  @each $color in $theme-colors {
+    &-#{$color} {
+      background-color: var(--#{$color});
+      &:hover {
+        background-color: var(--#{$color}-hover)
+      }
+    }
+  }
+}

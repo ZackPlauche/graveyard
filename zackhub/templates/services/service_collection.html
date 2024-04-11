@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block page_class %}bg-black text-white{% endblock %}
+
+{% block content %}
+
+<section class="flex text-white text-center{{ page.hero_css_classes }}" style="background-image: url({{ page.hero_background_image.file.url}}); min-height: 120px">
+    <div class="container">
+        <h1 class="mb-0">
+        {% if page.icon %}
+            <span class="text-middle">{% image page.icon height-60 %}</span>
+        {% endif %}
+        {{ page.specific.title }}
+        </h1>
+        {% if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
+    </div>
+</section>
+
+{# Collection Nav #}
+<nav class="collection-nav list-nav py-2">
+    {% for collection in collections %}
+        {% if collection.get_children.live.count %}
+        <a class="list-nav-link {% if collection == page %}active{% endif %}" 
+        href="{% pageurl collection %}">
+            <span class="text-middle">{% image collection.icon height-20 %}</span>
+            {{ collection.title }}
+        </a>
+        {% endif %}
+    {% endfor %}
+</nav>
+
+{# Service List #}
+<section class="service-collection bg-black">
+    <div class="container">
+        <p class="lead text-center pt-1">Pick a service below to get started.</p>
+        <div class="service-card-list">
+            {% for service in services %}
+                {% include 'includes/service_card.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+    {% endblock %}

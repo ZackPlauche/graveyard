@@ -1,0 +1,26 @@
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 0px;
+}
+
+.message-delete {
+  content: '&times;';
+  position: absolute;
+  right: 10px;
+  color: black;
+}
+
+.message.error {
+  background-color: rgb(253, 226, 226);
+  color: red;
+  box-shadow: 0 0 1px red;
+}
+
+.message.success {
+  background-color: var(--success-superlight);
+  color: var(--success);
+  box-shadow: 0 0 1px var(--success);
+}

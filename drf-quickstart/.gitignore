@@ -1,0 +1,8 @@
+Pipfile
+.env
+*.pyc
+logs
+.log
+
+# Development Database
+db.sqlite3

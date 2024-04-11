@@ -1,0 +1,14 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+<a 
+ {% if service.redirect_url %}
+     href="{{ service.redirect_url }}" target="_blank" rel="noopener noreferrer"
+ {% else %}
+     href="{% pageurl service %}"
+ {% endif %}
+ class="service-card border-primary shadow-hover-lg-primary wipe text-white{{ css_classes }}"
+>
+    <div class="service-card-icon">{% image service.specific.icon height-80 %}</div>
+    <h3 class="text-thin">{{ service.title }}</h3>
+    {% if service.specific.price %}<p class="service-card-price"><span class="h3">{{ service.specific.get_price }}</span> <span class="small">{{ service.specific.pricing_model }}</span></p>{% endif %}
+    <span class="h4 service-card-cta">{{ service.pre_cta|default:'Learn More' }}</span>
+</a>

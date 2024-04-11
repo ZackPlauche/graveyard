@@ -1,0 +1,1 @@
+DEFAULT_START_MESSAGE = 'I\'m a bot, talk to me!'

@@ -1,0 +1,5 @@
+django-extensions
+openai
+pillow
+pip-chill
+python-dotenv

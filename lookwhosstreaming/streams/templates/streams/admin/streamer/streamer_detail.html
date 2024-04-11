@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block breadcrumbs %}
+<li><a href="{% url 'streams:streamer_list' %}" class="back">Back</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="admin">
+  <div class="streamer-detail">
+    <div class="admin-header">
+      <h1>Streamer Admin</h1>
+    </div>
+
+    <div class="admin-detail-block">
+      <div class="admin-detail-block-header">
+        <h2>{{ streamer.name }}</h2>
+      </div>
+      <table>
+        {% for account in streamer.account_set.all %}
+        <tr>
+          <th><strong>{{ account.platform }}: </strong></th>
+          <td>{% if account.platform.name == 'Instagram' %}@{{ account.name|lower }}{% else %}{{ account.name }}{% endif %}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+          <th>Category:</th>
+          <td>{{ streamer.category }}</td>
+        </tr>
+      </table>
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

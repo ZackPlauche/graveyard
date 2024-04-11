@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block breadcrumbs %}
+<li><a href="{% url 'streams:stream_list' %}" class="back">Back</a></li>
+{% endblock %}
+
+{% block main %}
+<div class="admin">
+  <div class="streamer-detail">
+    <div class="admin-header">
+      <h1>Stream Admin</h1>
+    </div>
+
+    <div class="admin-detail-block">
+      <div class="admin-detail-block-header">
+        <h2>{{ stream.host }}</h2>
+      </div>
+      <table>
+        <tr>
+          <th><strong>Host: </strong></th>
+          <td>{{ stream.host }}</td>
+        </tr>
+        <tr>
+          <th><strong>Platform: </strong></th>
+          <td>{{ stream.platform }}</td>
+        </tr>
+        <tr>
+          <th><strong>URL: </strong></th>
+          <td>{{ stream.url }}</td>
+        </tr>
+        <tr>
+          <th><strong>Currently Live: </strong></th>
+          <td>{{ stream.live }}</td>
+        </tr>
+        <tr>
+          <th><strong>Start Date: </strong></th>
+          <td>{{ stream.start_time|date }}</td>
+        </tr>
+        <tr>
+          <th><strong>Start Time: </strong></th>
+          <td>{{ stream.start_time|date:'g:i A'|lower }}</td>
+        </tr>
+        <tr>
+          <th><strong>End Date: </strong></th>
+          <td>{{ stream.end_time|date }}</td>
+        </tr>
+        <tr>
+          <th><strong>End Time: </strong></th>
+          <td>{{ stream.end_time|date:'g:i A'|lower }}</td>
+        </tr>
+        <tr>
+          <th><strong>Peak Viewers: </strong></th>
+          <td>{{ stream.peak_viewers }}</td>
+        </tr>
+        <tr>
+          <th><strong>Average Viewers: </strong></th>
+          <td>{{ stream.average_viewers }}</td>
+        </tr>
+        <tr>
+          <th><strong>Current Viewers: </strong></th>
+          <td>{{ stream.current_viewers }}</td>
+        </tr>
+
+      </table>
+      <p></p>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

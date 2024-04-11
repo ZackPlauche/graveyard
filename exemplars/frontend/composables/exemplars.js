@@ -1,0 +1,1 @@
+export const useExemplarModel = () => useAPIModel('/exemplars/')

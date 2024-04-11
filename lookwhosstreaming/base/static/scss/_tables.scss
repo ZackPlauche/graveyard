@@ -1,0 +1,121 @@
+@use "settings" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+
+.index-list {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 20px auto 0px;
+  padding: 10px;
+  width: 90%;
+  max-width: 600px;
+  background: white;
+
+  .header {
+    @include flex($justify-content: space-between);
+    padding: 0 0 10px 0;
+
+    h2 {
+      font-size: 2em;
+    }
+
+    a {
+      color: white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      background-color: $green;
+      height: 40px;
+      width: 40px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: darken($green, 5);
+      }
+    }
+  }
+
+  &-table {
+  .row {
+    @include flex();
+  }
+
+  .data {
+    &:not(:last-child) {
+      width: 100px;
+      text-align: center;
+      flex: 1;
+    }
+
+    &:last-child {
+      width: 80px;
+    }
+  }
+
+  .thead {
+    .row {
+      border-bottom: 1px solid darkgrey;
+      height: 30px;
+      font-size: 1.1em;
+    }
+  }
+
+  .tbody {
+    .row {
+      height: 50px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid lightgrey;
+      }
+    }
+
+    .data {
+      a {
+        color: $primary;
+
+        &:hover {
+          border-bottom: 1px solid $primary;
+        }
+      }
+    }
+
+    .buttons {
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 40px;
+        transition: color 0.2s ease;
+
+        &.edit {
+          color: $brightorange;
+          font-size: 20px;
+
+          &:hover {
+            color: darken($brightorange, 10);
+          }
+        }
+
+        &.delete {
+          color: red;
+          font-size: 23px;
+
+          &:hover {
+            color: darken(red, 10);
+          }
+        }
+      }
+    }
+  }
+}
+
+}
+
+

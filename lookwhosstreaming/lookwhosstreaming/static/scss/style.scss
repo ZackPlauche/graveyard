@@ -1,0 +1,580 @@
+// Imports
+@use "buttons" as *;
+@use "defaults" as *;
+@use "forms" as *;
+@use "footer" as *;
+@use "mixins" as *;
+@use "navbar" as *;
+@use "navigation" as *;
+@use "reset";
+@use "settings" as *;
+@use "utilities" as *;
+@use "variables" as *;
+
+// 1. Home (Schedule)
+
+.home {
+  .header {
+    @include flex(column);
+    padding: 20px 10px 0;
+    text-align: center;
+  }
+}
+
+// Schedule
+.schedule {
+  margin-top: 20px;
+
+  nav {
+    display: flex;
+    justify-content: center;
+
+    &.platforms {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: skew(-15deg);
+
+      & > * {
+        margin-right: 1px;
+      }
+    }
+
+    &.dates {
+      margin-top: 20px;
+
+      .carousel-wrapper {
+        position: relative;
+        background-color: black;
+        overflow: hidden;
+
+        .arrow {
+          @include flex();
+          height: 100%;
+          width: 30px;
+          position: absolute;
+          top: 0;
+          z-index: 2;
+          background-color: $electricblue;
+          box-shadow: 0 0 20px $electricblue;
+          cursor: pointer;
+
+          span {
+            height: 10px;
+            width: 10px;
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+            transition: all 0.3s ease;
+
+            &.disabled {
+              border-color: #ffffff90;
+            }
+          }
+
+          &#left-arrow {
+            span {
+              transform: rotate(-135deg);
+            }
+
+            left: 0;
+          }
+
+          &#right-arrow {
+            span {
+              transform: rotate(45deg);
+            }
+            right: 0;
+          }
+        }
+      }
+
+      .carousel {
+        max-width: 500px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: $electricblue;
+        position: relative;
+      }
+
+      .date-list {
+        display: flex;
+        transform: skew(-15deg);
+        width: max-content;
+        padding: 0 170px;
+        z-index: 0;
+        position: relative;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 150px;
+      background-color: $blueberry;
+      color: white;
+      flex-shrink: 0;
+
+      &.active {
+        font-weight: 600;
+        background-color: $blueberryjuice;
+      }
+
+      &:hover {
+        background-color: $blueberryjuice;
+      }
+
+      span {
+        transform: skew(15deg);
+      }
+    }
+  }
+
+  table {
+    width: 500px;
+    border-collapse: collapse;
+
+    thead {
+      background-color: whitesmoke;
+      text-align: center;
+    }
+
+    th {
+      padding: 5px 20px;
+    }
+
+    tr {
+      border-bottom: 1px dashed grey;
+
+      &:nth-child(2n + 1) {
+        background: whitesmoke;
+      }
+    }
+
+    td {
+      text-align: center;
+      padding: 20px;
+    }
+  }
+
+  .clean-error-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 500px;
+    background-color: whitesmoke;
+  }
+}
+
+// 3. Admin
+
+.admin {
+  // Admin Section Forms
+  form {
+    padding: 20px;
+    box-shadow: 0 2px 5px rgb(158, 158, 158);
+
+    .field-group {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    label {
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+
+    input {
+      border: none;
+      padding: 7px;
+      width: 100%;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      transition: all 0.1s ease;
+      outline: none;
+
+      &:hover {
+        border-color: darkgrey;
+      }
+
+      &:focus {
+        border-color: #21abde;
+      }
+    }
+
+    small {
+      color: grey;
+      width: 100%;
+    }
+
+    button {
+      margin: 20px 0 0;
+      width: 50%;
+      height: 40px;
+      font-size: 16px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      background-color: $blueberry;
+      color: white;
+
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover,
+      &:focus {
+        background-color: #1c91bb;
+      }
+    }
+  }
+
+  // Error Handling
+  .error {
+    color: $raspberry;
+    width: 90%;
+    text-align: center;
+  }
+
+  // Admin Login Form
+  .login {
+    @include flex(column);
+
+    h1 {
+      display: inline-block;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 4em;
+    }
+
+    form {
+      max-width: 430.337px;
+      width: 100%;
+    }
+  }
+
+  // Add Streamer Form
+  .add-streamer {
+    @include flex(column);
+
+    .header {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 4em;
+    }
+
+    .forms {
+      @include flex($flex-flow: row-reverse wrap, $align-items: stretch);
+      width: 90%;
+
+      @media screen and (max-width: 1141px) {
+        flex-direction: row;
+      }
+
+      form {
+        max-width: 465.48px;
+        width: 100%;
+        @include flex(column);
+        margin: 20px;
+  
+        h2 {
+          margin-bottom: 10px;
+        }
+      }
+  
+    .right_column {
+      display: inline-block;
+
+      form {
+          height: calc(50% - 40px)
+        }
+
+      #schedule-form {
+          button {
+            background-color: $blueberry;
+    
+            &:hover {
+              background: #1c91bb;
+            }
+          }
+      }
+    }
+
+    .left_column {
+      max-width: 465.48px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+
+      #streamer-form {
+        button {
+          background-color: #00a706;
+  
+          &:hover {
+            background-color: #008604;
+          }
+        }
+      }
+    }
+    }
+  }
+}
+
+.admin-dashboard {
+
+  // Page header
+  & > .header {
+    text-align: center;
+
+    h1 {
+      font-size: 4em;
+      margin-top: 20px;
+    }
+
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0 0;
+      width: 200px;
+      height: 40px;
+      font-size: 16px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      background-color: $leaf;
+      color: white;
+
+      &:hover,
+      &:focus {
+        background-color: #1c91bb;
+      }
+    }
+  }
+
+  // Entire Dashboard
+  .dashboard {
+    margin: auto;
+    margin-top: 30px;
+    width: 98%;
+    box-shadow: 0 0 2px grey;
+    border-radius: 5px;
+    overflow: hidden;
+
+    // Dashboard Header
+    .header {
+      @include flex($justify-content: space-between);
+      padding: 10px 20px;
+
+      h2 {
+        font-size: 2em;
+      }
+
+      form {
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        border: unset;
+        height: 35px;
+        width: unset;
+        border-radius: 0;
+        box-shadow: unset;
+        padding: 0;
+        max-width: unset;
+        margin: 0;
+
+        & > * {
+          height: 100%;
+
+          &:first-child {
+            border-radius: 5px 0 0 5px;
+          }
+        }
+
+        select {
+          border-radius: 0;
+          background-color: #272727;
+          border: none;
+          outline: none;
+          color: #e0e0e0;
+          padding: 0 5px;
+          border-right: 1px solid black;
+          font-size: 1em;
+
+          [disabled] {
+            color: grey;
+          }
+
+          & option {
+            color: white;
+            background-color: #272727;
+
+            &[value=""] {
+              color: grey;
+            }
+          }
+
+          &:hover,
+          &:focus {
+            background-color: #3a3a3a;
+          }
+        }
+
+        input {
+          width: unset;
+          margin: 0;
+          background-color: #272727;
+          box-shadow: inset 0 0 15px black;
+          border: unset;
+          color: #e0e0e0;
+          font-weight: 400;
+          border-radius: unset;
+          transition: 0.2s ease;
+
+          &::-webkit-input-placeholder {
+            transition: 0.2s ease;
+            color: darkgrey;
+          }
+
+          &:hover::-webkit-input-placeholder,
+          &:focus::-webkit-input-placeholder {
+            color: $electricblue;
+          }
+        }
+
+        button {
+          margin: 0;
+          height: 100%;
+          width: 50px;
+          border-radius: 0 5px 5px 0;
+          background-color: unset;
+          color: white;
+          background-color: $electricblue;
+
+          &:hover,
+          &:focus {
+            background-color: #1c91bb;
+          }
+        }
+      }
+    }
+
+    .table {
+      overflow-x: scroll;
+
+      // Table Scrollbar
+      &::-webkit-scrollbar {
+        height: 10px;
+        background-color: white;
+        border-radius: 0 0 5px 5px;
+      }
+
+      // Table Scrollbar track & thumb padding & radius
+      &::-webkit-scrollbar-track,
+      &::-webkit-scrollbar-thumb {
+        background-clip: padding-box;
+        border: 2px solid #0000;
+        border-radius: 100vh;
+        transition: all 0.3s ease;
+      }
+
+      // Table Scrollbar track styles
+      &::-webkit-scrollbar-track {
+        background-color: whitesmoke;
+      }
+
+      // Table Scrollbar thumb styles
+      &::-webkit-scrollbar-thumb {
+        background-color: #dadada;
+        height: 2px;
+        width: 2px;
+
+        &:hover {
+          background-color: #a8a8a8;
+        }
+      }
+    }
+
+    table {
+      border-top: 1px solid black;
+      border-collapse: collapse;
+      font-size: 14px;
+      border-bottom: 1px solid lightgrey;
+
+      // Column borders
+      col {
+        border: 1px solid #dadcde;
+      }
+
+      //
+      input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+        border-radius: 0px;
+      }
+
+      a {
+      }
+
+      th {
+        padding: 15px 20px;
+        white-space: nowrap;
+        text-transform: capitalize;
+
+        &:hover {
+          background-color: #eceff2;
+        }
+      }
+
+      thead tr {
+        background-color: #f5f7f8;
+        border: 1px solid lightgrey;
+      }
+
+      // Body Rows
+      tbody tr {
+        // Every odd row
+        &:nth-child(odd) {
+          background-color: white;
+
+          &:hover {
+            background-color: #f2f2f2;
+          }
+        }
+
+        // Every even row
+        &:nth-child(even) {
+          background-color: #f5f6f7;
+
+          &:hover {
+            background-color: #dcdddd;
+          }
+        }
+
+        // Every row
+        &:nth-child(1n) {
+          border-left: 1px solid lightgrey;
+
+          &:active {
+            background-color: #edf5ff;
+            border-left: 1px solid #70b1ff;
+          }
+        }
+      }
+
+      td {
+        padding: 10px 10px;
+        // border: 1px solid black;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+  }
+}

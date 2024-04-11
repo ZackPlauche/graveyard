@@ -1,0 +1,40 @@
+.nav-link {
+  color: var(--inactive);
+  font-size: .9em;
+  font-weight: bold;
+  transition: var(--transition);
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  
+  &:hover {
+    color: var(--active);
+  }
+
+
+}
+
+.list-nav {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  white-space: nowrap;
+  font-size: var(--small);
+
+  &-link {
+    padding: 5px 15px;
+    color: white;
+    box-shadow: 0 0 5px var(--primary);
+    border-radius: 100vh;
+
+    &:hover,
+    &:focus,
+    &.active {
+        background-color: var(--primary);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+bs4
+pip-chill
+pydantic
+pysocks
+selenium

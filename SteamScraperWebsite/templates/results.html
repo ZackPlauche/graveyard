@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="w-[95%] mx-auto container py-5 text-white">
+        <h1 class="text-center text-7xl font-bold">Your Steam Data</h1>
+        <h2 class="text-4xl mt-4">JSON Format</h2>
+        <div id="results" class="bg-gray-900 px-3 py-2 rounded-lg mt-5 flex flex-col gap-1 overflow-x-auto">
+            <div>{</div>
+            {% for key, value in data.items %}
+                <div class="ml-10">
+                    <span class="font-bold">"{{ key }}"</span>: 
+
+                    {# Add href around links #}
+                    {% if 'http' in value %}
+                        <span class="text-cyan-400">"<a class="underline hover:text-white" target="_blank" href="{{ value }}">{{ value }}</a>"</span>
+                    {% else %}
+                        <span class="text-cyan-400">"{{ value }}"</span>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <div>}</div>
+        </div>
+    </div>
+{% endblock %}

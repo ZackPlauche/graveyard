@@ -1,0 +1,40 @@
+
+$properties: (
+  p: padding,
+  m: margin,
+);
+
+$directions: (
+  'l',
+  'r',
+  't',
+  'b',
+  'x',
+  'y',
+);
+
+$spacer: 10px;
+
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+);
+
+@each $abbr, $property in $properties {
+  @each $num, $val in $spacers {
+    .#{$abbr}t-#{$num} {#{$property}-top: $val !important}
+    .#{$abbr}r-#{$num} {#{$property}-right: $val !important}
+    .#{$abbr}b-#{$num} {#{$property}-bottom: $val !important}
+    .#{$abbr}l-#{$num} {#{$property}-left: $val !important}
+    .#{$abbr}x-#{$num} {#{$property}: 0 $val !important}
+    .#{$abbr}y-#{$num} {#{$property}: $val 0 !important}
+    .#{$abbr}-#{$num} {#{$property}: $val !important}
+  }
+}
+
+.m-auto {margin: auto}
+.mx-auto {margin: 0 auto}

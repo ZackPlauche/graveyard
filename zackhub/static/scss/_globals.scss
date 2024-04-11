@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--base-font-size);
+}
+
+body {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: var(--base-font-size);
+  font-family: var(--base-font);
+  font-weight: var(--base-font-weight);
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--black);
+}
+
+header {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+section {
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary);
+  transition: var(--transition);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-weight);
+}
+
+h1, .h1 {font-size: var(--h1)}
+h2, .h2 {font-size: var(--h2)}
+h3, .h3 {font-size: var(--h3)}
+h4, .h4 {font-size: var(--h4)}
+h5, .h5 {font-size: var(--h5)}
+h6, .h6 {font-size: var(--h6)}
+
+h1 {margin-bottom: 20px}
+h2 {margin-bottom: 10px}
+
+ul li,
+ol li {
+  margin-left: 50px;
+
+  &:not(:last-of-type) {margin-bottom: 10px}
+}
+
+p {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  letter-spacing: var(--base-letter-spacing);
+
+  a:hover {text-decoration: underline}
+  &:not(.lead) {padding: 5px 0}
+}
+
+.lead {
+  font-size: var(--lead);
+  font-weight: var(--thin);
+  margin-bottom: 20px;
+}
+
+.small {
+  font-size: var(--small);
+  font-weight: var(--thin);
+}
+
+.mini {
+  font-size: var(--mini);
+  font-weight: var(--thin);
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  border: none;
+}
+
+form {
+  margin: auto;
+  max-width: 800px;
+
+  .field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .field-row {
+    display: flex;
+    justify-content: center;
+    gap: 0px 20px;
+    
+    @media screen and (max-width: 850px) {flex-flow: column}
+  }
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: var(--small);
+}
+
+input:not([type="checkbox"]),
+textarea,
+select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 47px;
+  font-family: var(--base-font);
+  font-size: 1em;
+  font-weight: var(--thin);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  transition: box-shadow var(--transition);
+  box-shadow: inset 0 0 0 1px var(--lightgrey);
+  outline: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 1px var(--primary);
+  }
+}
+@media screen and (max-width: 768px) {
+h1, .h1 {font-size:48px;}
+}

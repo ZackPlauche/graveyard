@@ -1,0 +1,28 @@
+.#~
+.~
+.#
+/.#~
+.vscode*
+.idea*
+venv/
+Pipfile
+Pipfile.lock
+*.pyc
+
+# databases
+db.*
+*.sqlite3
+
+#keys
+secrets.json
+
+#Mac
+.DS_Store
+
+files/*
+!files/.gitkeep
+template_files/*
+_pycache_
+
+# vscode
+.timetracker

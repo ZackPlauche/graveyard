@@ -1,0 +1,16 @@
+@each $color in $colors {
+  .bg-#{$color},
+  .bg-hover-#{$color} {
+    background-color: var(--#{$color});
+  }
+}
+
+$bg-settings: (
+  cover: size,
+  center: position,
+  fixed: attachment,
+);
+
+@each $setting, $property in $bg-settings {
+  .bg-#{$setting} {background-#{$property}: $setting}
+}

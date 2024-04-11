@@ -1,0 +1,50 @@
+Vpcs:
+- CidrBlock: 172.17.0.0/16
+  CidrBlockAssociationSet:
+  - AssociationId: vpc-cidr-assoc-00132d00
+    CidrBlock: 172.17.0.0/16
+    CidrBlockState:
+      State: associated
+  DhcpOptionsId: dopt-0ca2read0b2f865b
+  InstanceTenancy: default
+  IsDefault: true
+  OwnerId: '878495711110'
+  State: available
+  Tags:
+  - Key: Someroduct
+    Value: SAP
+  VpcId: vpc-6baa1103
+- CidrBlock: 10.117.23.128/25
+  CidrBlockAssociationSet:
+  - AssociationId: vpc-cidr-assoc-017f381205c7a3ce7
+    CidrBlock: 10.117.23.128/25
+    CidrBlockState:
+      State: associated
+  DhcpOptionsId: dopt-0ca2read0b2f865b
+  InstanceTenancy: default
+  IsDefault: false
+  OwnerId: '878495711110'
+  State: available
+  Tags:
+  - Key: Someroduct
+    Value: SAP
+  - Key: Name
+    Value: DMZ
+  VpcId: vpc-0fb076db77b09aa45
+- CidrBlock: 10.117.23.0/25
+  CidrBlockAssociationSet:
+  - AssociationId: vpc-cidr-assoc-0022a7b000a1bd7a7
+    CidrBlock: 10.117.23.0/25
+    CidrBlockState:
+      State: associated
+  DhcpOptionsId: dopt-039b6ffcc38b5981b
+  InstanceTenancy: default
+  IsDefault: false
+  OwnerId: '878495711110'
+  State: available
+  Tags:
+  - Key: Name
+    Value: Internal
+  - Key: Someroduct
+    Value: SAP
+  VpcId: vpc-042c76008047f4bae
